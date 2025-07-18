@@ -1,0 +1,10 @@
+{
+    "header": {
+        "nav": {
+            "home": "Home",
+            "projects": "Projects",
+            "experiences": "Experiences",
+            "contact": "Contact"
+        }
+    }
+}

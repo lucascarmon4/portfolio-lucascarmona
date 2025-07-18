@@ -1,0 +1,12 @@
+{
+    "header": {
+        "nav": {
+            "home": "Início",
+            "projects": "Projetos",
+            "experiences": "Experiências",
+            "contact": "Contato"
+        },
+        "button1": "Acessar Portfólio",
+        "button2": "Download CV"
+    }
+}
