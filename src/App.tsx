@@ -5,7 +5,6 @@ import ExperienceSection from "./components/ExperienceSection/ExperienceSection"
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import ProjectsSection from "./components/ProjectsSection/ProjectsSection";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
