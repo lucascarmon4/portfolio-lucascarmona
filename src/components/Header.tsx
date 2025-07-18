@@ -18,6 +18,8 @@ function Header() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const [curLang, _] = useState<"pt" | "en">("pt");
+
     return (
         <>
             <div id="top" />
@@ -89,7 +91,14 @@ function Header() {
 
                     {/* Botões à direita */}
                     <div className="flex gap-3 flex-shrink-0">
-                        <Button type="secondary">{t("header.button2")}</Button>
+                        <Button type="secondary">
+                            <a
+                                href={`/cv/lucascarmona-${curLang}.pdf`}
+                                download
+                            >
+                                {t("header.button2")}
+                            </a>
+                        </Button>
                         <Button type="primary">{t("header.button1")}</Button>
                     </div>
                 </div>
