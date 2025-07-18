@@ -23,7 +23,7 @@ function Button({
         >
             {/* fundo animado */}
             <span
-                className={`absolute top-0 h-full w-0 z-0 transition-all duration-300 ease-in-out 
+                className={`absolute top-0 h-full w-0 z-0 transition-all duration-300 ease-in-out  cursor-pointer
           ${
               isPrimary
                   ? "left-0 group-hover:w-full bg-black"
@@ -34,7 +34,7 @@ function Button({
 
             {/* conteúdo do botão */}
             <span
-                className={`relative z-10 transition-colors duration-300 ease-in-out`}
+                className={`relative z-10 transition-colors duration-300 ease-in-out cursor-pointer`}
             >
                 {children}
             </span>
