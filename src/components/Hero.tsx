@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
 import Button from "./Button";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 function Hero() {
+    const { t } = useTranslation();
+
     return (
         <section
             id="header"
@@ -30,25 +33,18 @@ function Hero() {
             {/* Conteúdo central */}
             <div className="text-center max-w-2xl">
                 <h1
-                    className="text-3xl sm:text-4xl md:text-5xl font-['Inter400'] font-bold leading-tight mb-6"
+                    className="text-2xl sm:text-3xl md:text-4xl font-['Inter400'] font-bold leading-tight mb-6"
                     data-aos="fade-down"
                     data-delay={0}
-                >
-                    <span>DESENVOLVEDOR</span>
-                    <br />
-                    FULLSTACK COM FOCO EM
-                    <br />
-                    SOLUÇÕES INTELIGENTES.
-                </h1>
+                    dangerouslySetInnerHTML={{ __html: t("hero.title") }}
+                />
 
                 <p
                     className="text-sm sm:text-base text-gray-300 mb-8 font-[Inter400]"
                     data-aos="fade-down"
                     data-aos-delay={100}
                 >
-                    Cursando Ciência da Computação, desenvolvo aplicações
-                    completas com React no front e PHP no back, unindo
-                    performance, organização e boas práticas.
+                    {t("hero.description")}
                 </p>
 
                 <div
@@ -56,8 +52,8 @@ function Hero() {
                     data-aos-delay={200}
                     className="flex justify-center gap-4 flex-wrap"
                 >
-                    <Button type="primary">Download CV</Button>
-                    <Button type="secondary">Acessar Portfólio</Button>
+                    <Button type="primary">{t("header.button2")}</Button>
+                    <Button type="secondary">{t("header.button1")}</Button>
                 </div>
             </div>
         </section>
