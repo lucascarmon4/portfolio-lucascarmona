@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ProjectsSection from "./components/ProjectsSection/ProjectsSection";
 
 function App() {
     useEffect(() => {
@@ -18,7 +19,7 @@ function App() {
             <CustomCursor />
             <Header />
             <Hero />
-            {/* <ProjectsSection /> */}
+            <ProjectsSection />
             <ExperienceSection />
             <ContactSection />
             <Footer />

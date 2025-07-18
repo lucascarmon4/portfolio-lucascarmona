@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Certificação AWS",
+        "company": "AWS Academy",
+        "period": "2023",
+        "description": "Curso de fundamentos em cloud com foco em infraestrutura...",
+        "link": "https://www.linkedin.com/in/lucas-carmona-neto/details/certifications/"
+    },
+    {
+        "title": "Certificação em React",
+        "company": "Curso Online",
+        "period": "2022",
+        "description": "Curso avançado de React com foco em desenvolvimento de aplicações web."
+    },
+    {
+        "title": "Certificação em JavaScript",
+        "company": "Curso Online",
+        "period": "2021",
+        "description": "Curso completo de JavaScript, abordando desde o básico até conceitos avançados.",
+        "link": "https://www.linkedin.com/in/lucas-carmona-neto/details/certifications/"
+    }
+]

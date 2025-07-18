@@ -2,44 +2,8 @@ import { useRef, useState, useEffect } from "react";
 import { FaBriefcase, FaGraduationCap } from "react-icons/fa";
 import QualificationItem from "./QualificationItem";
 import ExperienceItem from "./ExperienceItem";
-
-const experiences = [
-    {
-        title: "Desenvolvedor Fullstack Sênior",
-        company: "Nome da Empresa",
-        period: "2023 – 2024",
-        description:
-            "Lorem ipsum é uma simulação de texto da indústria tipográfica...",
-    },
-    {
-        title: "Desenvolvedor Frontend Pleno",
-        company: "Outra Empresa",
-        period: "2022 – 2023",
-        description:
-            "- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    },
-    // outros
-];
-
-const qualifications = [
-    {
-        title: "Certificação AWS",
-        company: "AWS Academy",
-        period: "2023",
-        description:
-            "Curso de fundamentos em cloud com foco em infraestrutura...",
-        link: "https://www.linkedin.com/in/lucas-carmona-neto/details/certifications/",
-    },
-    {
-        title: "Certificação em React",
-        company: "Curso Online",
-        period: "2022",
-        description:
-            "Curso avançado de React com foco em desenvolvimento de aplicações web.",
-        link: "https://www.linkedin.com/in/lucas-carmona-neto/details/certifications/",
-    },
-    // outros
-];
+import experiences from "../../data/experiences.json";
+import qualifications from "../../data/qualifications.json";
 
 const ExperienceSection = () => {
     const [activeTab, setActiveTab] = useState<
