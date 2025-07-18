@@ -52,6 +52,7 @@ function Header() {
                                     className={navLinksStyle}
                                     duration={500}
                                     smooth
+                                    offset={-window.innerHeight}
                                 >
                                     {t("header.nav.home")}
                                 </Link>
@@ -62,6 +63,7 @@ function Header() {
                                     className={navLinksStyle}
                                     duration={500}
                                     smooth
+                                    offset={-100}
                                 >
                                     {t("header.nav.projects")}
                                 </Link>
@@ -72,6 +74,7 @@ function Header() {
                                     className={navLinksStyle}
                                     duration={500}
                                     smooth
+                                    offset={-100}
                                 >
                                     {t("header.nav.experiences")}
                                 </Link>
@@ -82,6 +85,7 @@ function Header() {
                                     className={navLinksStyle}
                                     duration={500}
                                     smooth
+                                    offset={-20}
                                 >
                                     {t("header.nav.contact")}
                                 </Link>
