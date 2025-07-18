@@ -43,13 +43,16 @@ const EmblaCarousel: React.FC<PropType> = ({ projects, options }) => {
                             key={index}
                             className="min-w-[90%] sm:min-w-[60%] lg:min-w-[25%] shrink-0"
                         >
-                            <ProjectCard {...proj} />
+                            <ProjectCard {...proj} idx={index} />
                         </div>
                     ))}
                 </div>
             </div>
 
-            <div className="mt-8 flex flex-col items-center gap-4">
+            <div
+                className="mt-8 flex flex-col items-center gap-4"
+                data-aos="zoom-in-up"
+            >
                 <div className="flex gap-4">
                     <PrevButton
                         onClick={onPrevButtonClick}

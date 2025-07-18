@@ -6,11 +6,16 @@ type Props = {
     techs: string[];
     image?: string;
     link: string;
+    idx: number;
 };
 
-function ProjectCard({ title, description, techs, image, link }: Props) {
+function ProjectCard({ title, description, techs, image, link, idx }: Props) {
     return (
-        <div className="bg-black border border-white/10 rounded-lg overflow-hidden flex flex-col shadow-lg w-full max-w-sm">
+        <div
+            data-aos="fade-down"
+            data-aos-delay={`${(idx + 1) * 100}`}
+            className="bg-black border border-white/10 rounded-lg overflow-hidden flex flex-col shadow-lg w-full max-w-sm"
+        >
             {/* imagem */}
             <div className="h-40 bg-gray-900 flex items-center justify-center text-white text-sm">
                 {image ? (
