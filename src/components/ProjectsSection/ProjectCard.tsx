@@ -25,7 +25,7 @@ function ProjectCard({
         <div
             data-aos="fade-down"
             data-aos-delay={`${(idx + 1) * 100}`}
-            className="bg-black border border-white/10 rounded-lg overflow-hidden flex flex-col shadow-lg w-full max-w-sm"
+            className="bg-black border border-white/10 rounded-lg overflow-hidden flex flex-col shadow-lg w-full max-w-sm h-full"
         >
             {/* imagem */}
             <div className="h-40 bg-gray-900 flex items-center justify-center text-white text-sm">
