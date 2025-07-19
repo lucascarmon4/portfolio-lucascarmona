@@ -7,7 +7,7 @@ type Props = {
     image?: string;
     link: string;
     idx: number;
-    source: string; // ex: 'UNISANTOS', 'Pessoal', 'Viva Cred'
+    source?: string; // ex: 'UNISANTOS', 'Pessoal', 'Viva Cred'
     isOffline?: boolean; // default false
 };
 
