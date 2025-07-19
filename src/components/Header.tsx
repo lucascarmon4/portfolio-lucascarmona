@@ -19,7 +19,7 @@ function Header() {
 
     const navLinks = [
         { to: "top", label: t("header.nav.home"), offset: -window.innerHeight },
-        { to: "projects", label: t("header.nav.projects"), offset: -100 },
+        { to: "projects", label: t("header.nav.projects"), offset: -60 },
         { to: "experiences", label: t("header.nav.experiences"), offset: -100 },
         { to: "contact", label: t("header.nav.contact"), offset: -20 },
     ];
