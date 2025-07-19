@@ -11,7 +11,9 @@ function Hero() {
             className="mt-[98px] min-h-[calc(100vh-98px)] flex items-center justify-center bg-black text-white px-6"
         >
             {/* Ícones sociais à esquerda */}
-            <div className="fixed left-6 top-1/2 -translate-y-1/2 space-y-6 text-xl z-40 flex flex-col justify-center">
+            {/* <div className="fixed left-6 top-1/2 -translate-y-1/2 space-y-6 text-xl z-40 flex flex-col justify-center"> */}
+            {/* REMOVE THIS DIV WHEN IS MOBILE. */}
+            <div className="hidden xl:flex flex-col gap-6 text-2xl fixed left-6 top-1/2 -translate-y-1/2 z-40">
                 <a
                     href="https://linkedin.com/in/lucas-carmona-neto"
                     target="_blank"
