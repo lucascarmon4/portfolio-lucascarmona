@@ -7,9 +7,20 @@ type Props = {
     image?: string;
     link: string;
     idx: number;
+    source: string; // ex: 'UNISANTOS', 'Pessoal', 'Viva Cred'
+    isOffline?: boolean; // default false
 };
 
-function ProjectCard({ title, description, techs, image, link, idx }: Props) {
+function ProjectCard({
+    title,
+    description,
+    techs,
+    image,
+    link,
+    idx,
+    source,
+    isOffline = false,
+}: Props) {
     return (
         <div
             data-aos="fade-down"
@@ -32,8 +43,22 @@ function ProjectCard({ title, description, techs, image, link, idx }: Props) {
             {/* conteúdo */}
             <div className="p-5 flex flex-col flex-1 justify-between">
                 <div>
-                    <h3 className="text-lg font-semibold mb-2">{title}</h3>
+                    <h3 className="text-lg font-semibold mb-1">{title}</h3>
+                    {/* fonte */}
+                    <div className="flex items-center flex-wrap gap-2 mb-2">
+                        <span className="text-xs px-2 py-0.5 rounded-full bg-white/10 border border-white/20 text-gray-200">
+                            {source}
+                        </span>
+                        {isOffline && (
+                            <span className="text-xs px-2 py-0.5 rounded-full text-red-400 border border-red-400">
+                                Offline
+                            </span>
+                        )}
+                    </div>
+
                     <p className="text-sm text-gray-300 mb-4">{description}</p>
+
+                    {/* techs */}
                     <div className="flex flex-wrap gap-2 mb-4">
                         {techs.map((tech) => (
                             <span
@@ -45,11 +70,16 @@ function ProjectCard({ title, description, techs, image, link, idx }: Props) {
                         ))}
                     </div>
                 </div>
+
+                {/* botão */}
                 <Button
                     type="primary"
-                    onClick={() => window.open(link, "_blank")}
+                    onClick={() => {
+                        if (!isOffline) window.open(link, "_blank");
+                    }}
+                    disabled={isOffline}
                 >
-                    Acessar projeto
+                    {isOffline ? "Indisponível" : "Acessar projeto"}
                 </Button>
             </div>
         </div>

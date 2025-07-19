@@ -3,6 +3,7 @@ type Props = {
     onClick?: () => void;
     className?: string;
     type: "primary" | "secondary";
+    disabled?: boolean;
 };
 
 function Button({
@@ -10,31 +11,50 @@ function Button({
     onClick = () => {},
     className = "",
     type = "primary",
+    disabled = false,
 }: Props) {
     const isPrimary = type === "primary";
 
     return (
         <button
+            disabled={disabled}
             onClick={onClick}
-            className={`text-white relative overflow-hidden inline-block px-6 py-3 rounded-lg border border-primary 
-        font-['Inter400'] cursor-pointer z-0 group hover:translate-y-[-2px] transition-transform duration-300 ease-in-out
-        ${isPrimary ? "text-black bg-primary" : "text-primary bg-transparent"}
-        ${className}`}
+            className={`
+                relative overflow-hidden inline-block px-6 py-3 rounded-lg border font-['Inter400']
+                transition-transform duration-300 ease-in-out
+                ${
+                    disabled
+                        ? "opacity-50 cursor-not-allowed"
+                        : "cursor-pointer hover:translate-y-[-2px] group"
+                }
+                ${
+                    isPrimary
+                        ? `bg-primary border-primary text-black`
+                        : `bg-transparent border-primary text-primary`
+                }
+                ${className}
+            `}
         >
             {/* fundo animado */}
-            <span
-                className={`absolute top-0 h-full w-0 z-0 transition-all duration-300 ease-in-out  cursor-pointer
-          ${
-              isPrimary
-                  ? "left-0 group-hover:w-full bg-black"
-                  : "right-0 group-hover:w-full bg-primary"
-          }
-        `}
-            ></span>
+            {!disabled && (
+                <span
+                    className={`
+                        absolute top-0 h-full w-0 z-0 transition-all duration-300 ease-in-out cursor-pointer
+                        ${
+                            isPrimary
+                                ? "left-0 group-hover:w-full bg-black"
+                                : "right-0 group-hover:w-full bg-primary"
+                        }
+                    `}
+                ></span>
+            )}
 
-            {/* conteúdo do botão */}
+            {/* conteúdo */}
             <span
-                className={`relative z-10 transition-colors duration-300 ease-in-out cursor-pointer`}
+                className={`
+                    relative z-10 transition-colors duration-300 ease-in-out
+                    ${!disabled ? "group-hover:text-white cursor-pointer" : ""}
+                `}
             >
                 {children}
             </span>

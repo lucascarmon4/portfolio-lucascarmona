@@ -3,36 +3,48 @@
         "title": "Projeto 1",
         "description": "Descrição curta do projeto...",
         "techs": ["React", "PHP", "MySQL"],
-        "link": "https://github.com/seu-projeto"
+        "link": "https://github.com/seu-projeto",
+        "source": "Viva Cred",
+        "isOffline": false
     },
     {
         "title": "Projeto 2",
         "description": "Outro projeto top...",
         "techs": ["TypeScript", "Node.js", "PostgreSQL"],
-        "link": "https://github.com/seu-projeto2"
+        "link": "https://github.com/seu-projeto2",
+        "source": "Pessoal",
+        "isOffline": false
     },
     {
         "title": "Projeto 3",
         "description": "Mais um projeto incrível...",
         "techs": ["Next.js", "MongoDB", "Tailwind CSS"],
-        "link": "https://github.com/seu-projeto3"
+        "link": "https://github.com/seu-projeto3",
+        "source": "UNISANTOS",
+        "isOffline": true
     },
     {
         "title": "Projeto 4",
         "description": "Descrição do projeto 4...",
         "techs": ["Vue.js", "Express", "SQLite"],
-        "link": "https://github.com/seu-projeto4"
+        "link": "https://github.com/seu-projeto4",
+        "source": "Backsite",
+        "isOffline": true
     },
     {
         "title": "Projeto 5",
         "description": "Descrição do projeto 5...",
         "techs": ["Angular", "Firebase", "Bootstrap"],
-        "link": "https://github.com/seu-projeto5"
+        "link": "https://github.com/seu-projeto5",
+        "source": "Pessoal",
+        "isOffline": false
     },
     {
         "title": "Projeto 6",
         "description": "Descrição do projeto 6...",
         "techs": ["Svelte", "Django", "PostgreSQL"],
-        "link": "https://github.com/seu-projeto6"
+        "link": "https://github.com/seu-projeto6",
+        "source": "UNISANTOS",
+        "isOffline": false
     }
 ]
