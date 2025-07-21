@@ -2,8 +2,8 @@ import { useRef, useState, useEffect } from "react";
 import { FaBriefcase, FaGraduationCap } from "react-icons/fa";
 import QualificationItem from "./QualificationItem";
 import ExperienceItem from "./ExperienceItem";
-import experiences from "../../data/experiences.json";
 import qualifications from "../../data/qualifications.json";
+import { useTranslation } from "react-i18next";
 
 const ExperienceSection = () => {
     const [activeTab, setActiveTab] = useState<
@@ -23,6 +23,17 @@ const ExperienceSection = () => {
             setUnderlineStyle({ left: offsetLeft, width: offsetWidth });
         }
     }, [activeTab]);
+
+    const { t } = useTranslation();
+
+    const experienceKeys = ["experience1", "experience2"];
+
+    const experiences = experienceKeys.map((key) => ({
+        title: t(`experiences.${key}.title`),
+        company: t(`experiences.${key}.company`),
+        period: t(`experiences.${key}.period`),
+        description: t(`experiences.${key}.description`),
+    }));
 
     const data = activeTab === "experiences" ? experiences : qualifications;
 

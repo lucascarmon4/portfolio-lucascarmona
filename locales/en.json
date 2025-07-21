@@ -52,5 +52,20 @@
             "title": "Sentiment Analysis Dashboard",
             "description": "Dashboard built for a UNISANTOS research project focused on market news sentiment analysis. Backend in Django with PostgreSQL and frontend using Svelte."
         }
+    },
+    "experiences": {
+        "title": "Experience",
+        "experience1": {
+            "title": "Senior Fullstack Developer",
+            "company": "Company Name",
+            "period": "2023 – 2024",
+            "description": "Lorem ipsum is placeholder text commonly used in the typesetting industry..."
+        },
+        "experience2": {
+            "title": "Frontend Developer",
+            "company": "Another Company",
+            "period": "2022 – 2023",
+            "description": "- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        }
     }
 }

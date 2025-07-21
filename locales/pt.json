@@ -52,5 +52,20 @@
             "title": "Dashboard de Análise de Sentimentos",
             "description": "Dashboard criado durante projeto de pesquisa na UNISANTOS com foco em análise de sentimentos de notícias de mercado. Backend com Django e PostgreSQL, front-end com Svelte."
         }
+    },
+    "experiences": {
+        "title": "Experiências",
+        "experience1": {
+            "title": "Desenvolvedor Fullstack Sênior",
+            "company": "Nome da Empresa",
+            "period": "2023 – 2024",
+            "description": "Lorem ipsum é uma simulação de texto da indústria tipográfica..."
+        },
+        "experience2": {
+            "title": "Desenvolvedor Frontend Pleno",
+            "company": "Outra Empresa",
+            "period": "2022 – 2023",
+            "description": "- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        }
     }
 }
