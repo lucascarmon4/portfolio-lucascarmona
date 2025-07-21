@@ -7,8 +7,8 @@ type Props = {
     image?: string;
     link: string;
     idx: number;
-    source?: string; // ex: 'UNISANTOS', 'Pessoal', 'Viva Cred'
-    isOffline?: boolean; // default false
+    source?: string;
+    isOffline?: boolean;
 };
 
 function ProjectCard({
@@ -25,10 +25,10 @@ function ProjectCard({
         <div
             data-aos="fade-down"
             data-aos-delay={`${(idx + 1) * 100}`}
-            className="bg-black border border-white/10 rounded-lg overflow-hidden flex flex-col shadow-lg w-full max-w-sm h-full"
+            className="bg-black border border-white/10 rounded-lg overflow-hidden flex flex-col shadow-lg w-full max-w-sm sm:max-w-md lg:max-w-md h-full"
         >
             {/* imagem */}
-            <div className="h-40 bg-gray-900 flex items-center justify-center text-white text-sm">
+            <div className="h-40 sm:h-48 bg-gray-900 flex items-center justify-center text-white text-sm sm:text-base">
                 {image ? (
                     <img
                         src={image}
@@ -41,14 +41,19 @@ function ProjectCard({
             </div>
 
             {/* conteúdo */}
-            <div className="p-5 flex flex-col flex-1 justify-between">
+            <div className="p-4 sm:p-5 flex flex-col flex-1 justify-between">
                 <div>
-                    <h3 className="text-lg font-semibold mb-1">{title}</h3>
+                    <h3 className="text-base sm:text-lg lg:text-xl font-semibold mb-1">
+                        {title}
+                    </h3>
+
                     {/* fonte */}
                     <div className="flex items-center flex-wrap gap-2 mb-2">
-                        <span className="text-xs px-2 py-0.5 rounded-full bg-white/10 border border-white/20 text-gray-200">
-                            {source}
-                        </span>
+                        {source && (
+                            <span className="text-xs px-2 py-0.5 rounded-full bg-white/10 border border-white/20 text-gray-200">
+                                {source}
+                            </span>
+                        )}
                         {isOffline && (
                             <span className="text-xs px-2 py-0.5 rounded-full text-red-400 border border-red-400">
                                 Offline
@@ -56,14 +61,16 @@ function ProjectCard({
                         )}
                     </div>
 
-                    <p className="text-sm text-gray-300 mb-4">{description}</p>
+                    <p className="text-sm sm:text-base text-gray-300 mb-4">
+                        {description}
+                    </p>
 
                     {/* techs */}
                     <div className="flex flex-wrap gap-2 mb-4">
                         {techs.map((tech) => (
                             <span
                                 key={tech}
-                                className="text-xs px-2 py-0.5 rounded-full bg-white/10 border border-white/20"
+                                className="text-xs sm:text-sm px-2 py-0.5 rounded-full bg-white/10 border border-white/20"
                             >
                                 {tech}
                             </span>

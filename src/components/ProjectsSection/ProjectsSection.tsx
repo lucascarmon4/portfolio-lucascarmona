@@ -5,7 +5,7 @@ function ProjectsSection() {
     return (
         <section
             id="projects"
-            className="bg-black text-white px-6 py-20 font-['Inter400']"
+            className="bg-black text-white sm:px-6 px-0 py-20 font-['Inter400']"
         >
             <h2
                 className="text-3xl sm:text-4xl font-bold mb-12 text-center"

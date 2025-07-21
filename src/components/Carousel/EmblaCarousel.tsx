@@ -35,7 +35,7 @@ const EmblaCarousel: React.FC<PropType> = ({ projects, options }) => {
     } = usePrevNextButtons(emblaApi);
 
     return (
-        <div className="w-full max-w-screen-xl mx-auto overflow-hidden px-6 sm:px-12 selection:bg-transparent">
+        <div className="w-full max-w-screen-xl mx-auto overflow-hidden px-0 sm:px-12 selection:bg-transparent">
             <div className="overflow-hidden" ref={emblaRef}>
                 <div className="flex gap-6">
                     {projects.map((proj, index) => (
@@ -50,7 +50,7 @@ const EmblaCarousel: React.FC<PropType> = ({ projects, options }) => {
             </div>
 
             <div
-                className="mt-8 flex flex-col items-center gap-4"
+                className="mt-0 sm:mt-8 flex flex-col items-center sm:gap-4 gap-2"
                 data-aos="zoom-in-up"
             >
                 <div className="flex gap-4">
@@ -69,7 +69,7 @@ const EmblaCarousel: React.FC<PropType> = ({ projects, options }) => {
                             key={index}
                             onClick={() => onDotButtonClick(index)}
                             className={
-                                "w-3 h-3 rounded-full bg-gray-500 transition " +
+                                "w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-gray-500 transition " +
                                 (index === selectedIndex
                                     ? "bg-white"
                                     : "opacity-50")

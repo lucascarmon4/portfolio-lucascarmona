@@ -3,11 +3,23 @@ import { useTranslation } from "react-i18next";
 import Button from "./Button";
 import { Link } from "react-scroll";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import i18n from "../utils/i18n";
+import MenuMobile from "./Header/MenuMobile";
 
 function Header() {
     const { t } = useTranslation();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    const toggleLanguage = () => {
+        const newLang = language === "en" ? "pt" : "en";
+        i18n.changeLanguage(newLang);
+        setLanguage(newLang);
+    };
+
+    const [language, setLanguage] = useState<"en" | "pt">(
+        i18n.language as "en" | "pt"
+    );
 
     useEffect(() => {
         const handleScroll = () => {
@@ -17,11 +29,29 @@ function Header() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const isDesktop = window.innerWidth > 1024;
+
     const navLinks = [
-        { to: "top", label: t("header.nav.home"), offset: -window.innerHeight },
-        { to: "projects", label: t("header.nav.projects"), offset: -60 },
-        { to: "experiences", label: t("header.nav.experiences"), offset: -100 },
-        { to: "contact", label: t("header.nav.contact"), offset: -20 },
+        {
+            to: "top",
+            label: t("header.nav.home"),
+            offset: isDesktop ? -window.innerHeight : 0,
+        },
+        {
+            to: "projects",
+            label: t("header.nav.projects"),
+            offset: isDesktop ? -50 : 70,
+        },
+        {
+            to: "experiences",
+            label: t("header.nav.experiences"),
+            offset: isDesktop ? -100 : 0,
+        },
+        {
+            to: "contact",
+            label: t("header.nav.contact"),
+            offset: isDesktop ? -20 : 15,
+        },
     ];
 
     const navLinksStyle = "hover-underline";
@@ -34,7 +64,7 @@ function Header() {
                     isScrolled ? "h-[72px] py-4" : "h-[98px] py-6"
                 }`}
             >
-                <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+                <div className=" mx-auto px-7 flex items-center justify-between">
                     {/* Logo */}
                     <h1
                         className={`font-['Michroma'] transition-all duration-300 ${
@@ -74,7 +104,7 @@ function Header() {
 
                     {/* Navbar Desktop */}
                     <nav className="hidden xl:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-['Inter400']">
-                        <ul className="flex gap-x-9 text-sm xl:text-base">
+                        <ul className="flex gap-x-8 text-sm xl:text-base">
                             {navLinks.map(({ to, label, offset }) => (
                                 <li key={to}>
                                     <Link
@@ -99,52 +129,61 @@ function Header() {
                             </a>
                         </Button>
                         <Button type="primary">{t("header.button1")}</Button>
+                        <div className="hidden xl:flex items-center gap-3 ml-2">
+                            <button
+                                onClick={toggleLanguage}
+                                className="flex items-center gap-2 px-2 py-1 rounded-full bg-gray-800 transition-all duration-300"
+                                title="Change language"
+                            >
+                                <img
+                                    src={
+                                        language === "en"
+                                            ? "/images/flags/br.svg"
+                                            : "/images/flags/us.svg"
+                                    }
+                                    alt={
+                                        language === "en"
+                                            ? "Português"
+                                            : "English"
+                                    }
+                                    className="w-5 h-5 cursor-pointer "
+                                />
+                                <span className="cursor-pointer  text-xs text-white font-semibold">
+                                    {language === "en" ? "PT" : "EN"}
+                                </span>
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                {/* Menu Mobile */}
-                <nav
-                    className={`p-10 fixed top-0 left-0 w-full h-screen bg-black flex flex-col items-center justify-between transition-transform duration-300 ${
-                        isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-                    } xl:hidden`}
-                >
-                    <ul className="text-lg space-y-12 text-center">
-                        {navLinks.map(({ to, label, offset }) => (
-                            <li key={to}>
-                                <Link
-                                    to={to}
-                                    smooth
-                                    duration={500}
-                                    offset={offset}
-                                    onClick={() => setIsMobileMenuOpen(false)}
-                                >
-                                    {label}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
+                <MenuMobile
+                    isMobileMenuOpen={isMobileMenuOpen}
+                    setIsMobileMenuOpen={setIsMobileMenuOpen}
+                    toggleLanguage={toggleLanguage}
+                    navLinks={navLinks}
+                    language={language}
+                />
 
-                    {/* SOCIAL MEDIA */}
-                    <div className="flex gap-6 text-2xl">
-                        <a
-                            href="https://linkedin.com/in/lucas-carmona-neto"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <FaLinkedin className="hover:text-teal-400 transition duration-400 hover:scale-110 cursor-pointer" />
-                        </a>
-                        <a
-                            href="https://github.com/lucascarmon4"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <FaGithub className="hover:text-teal-400 transition duration-400 hover:scale-110 cursor-pointer" />
-                        </a>
-                        <a href="mailto:lucascarmonaneto510@gmail.com">
-                            <FaEnvelope className="hover:text-teal-400 transition duration-400 hover:scale-110 cursor-pointer" />
-                        </a>
-                    </div>
-                </nav>
+                {/* SOCIAL ICONS - Fixed Left (Desktop Only) */}
+                <div className="hidden xl:flex flex-col gap-6 text-2xl fixed left-6 top-1/2 -translate-y-1/2 z-40">
+                    <a
+                        href="https://linkedin.com/in/lucas-carmona-neto"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <FaLinkedin className="hover:text-teal-400 transition duration-400 hover:scale-110 cursor-pointer" />
+                    </a>
+                    <a
+                        href="https://github.com/lucascarmon4"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <FaGithub className="hover:text-teal-400 transition duration-400 hover:scale-110 cursor-pointer" />
+                    </a>
+                    <a href="mailto:lucascarmonaneto510@gmail.com">
+                        <FaEnvelope className="hover:text-teal-400 transition duration-400 hover:scale-110 cursor-pointer" />
+                    </a>
+                </div>
             </header>
         </>
     );
