@@ -6,13 +6,13 @@
             "experiences": "Experiências",
             "contact": "Contato"
         },
-        "button1": "Acessar Portfólio",
+        "button1": "Acessar Projetos",
         "button2": "Download CV"
     },
     "hero": {
         "title": "DESENVOLVEDOR FULLSTACK <br /> COM FOCO EM RESULTADOS.",
         "description": "Crio soluções digitais completas que unem desempenho, organização e visão de produto.",
-        "button1": "Acessar Portfólio",
+        "button1": "Acessar Projetos",
         "button2": "Download CV"
     }
 }

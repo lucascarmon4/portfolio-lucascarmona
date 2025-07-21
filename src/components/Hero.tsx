@@ -1,9 +1,11 @@
 import { useTranslation } from "react-i18next";
 import Button from "./Button";
+import { Link } from "react-scroll";
+import i18n from "../utils/i18n";
 
 function Hero() {
     const { t } = useTranslation();
-
+    const language = i18n.language as "en" | "pt";
     return (
         <section
             id="header"
@@ -31,8 +33,14 @@ function Hero() {
                     data-aos-delay={200}
                     className="flex justify-center gap-4 flex-wrap"
                 >
-                    <Button type="primary">{t("header.button2")}</Button>
-                    <Button type="secondary">{t("header.button1")}</Button>
+                    <Button type="primary">
+                        <a href={`/cv/lucascarmona-${language}.pdf`} download>
+                            {t("header.button2")}
+                        </a>
+                    </Button>
+                    <Link to="projects" smooth duration={500} offset={-50}>
+                        <Button type="secondary">{t("header.button1")}</Button>
+                    </Link>
                 </div>
             </div>
         </section>

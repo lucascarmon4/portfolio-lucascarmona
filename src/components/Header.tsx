@@ -124,11 +124,18 @@ function Header() {
                     {/* Botões Desktop */}
                     <div className="hidden xl:flex gap-3">
                         <Button type="secondary">
-                            <a href="/cv/lucascarmona-pt.pdf" download>
+                            <a
+                                href={`/cv/lucascarmona-${language}.pdf`}
+                                download
+                            >
                                 {t("header.button2")}
                             </a>
                         </Button>
-                        <Button type="primary">{t("header.button1")}</Button>
+                        <Link to="projects" smooth duration={500} offset={-50}>
+                            <Button type="primary">
+                                {t("header.button1")}
+                            </Button>
+                        </Link>
                         <div className="hidden xl:flex items-center gap-3 ml-2">
                             <button
                                 onClick={toggleLanguage}

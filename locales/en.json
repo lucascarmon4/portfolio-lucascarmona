@@ -6,13 +6,13 @@
             "experiences": "Experiences",
             "contact": "Contact"
         },
-        "button1": "Access Portfolio",
+        "button1": "Access Projects",
         "button2": "Download CV"
     },
     "hero": {
         "title": "FULLSTACK DEVELOPER <br /> FOCUSED ON RESULTS.",
         "description": "I create complete digital solutions that combine performance, organization, and product vision.",
-        "button1": "Access Portfolio",
+        "button1": "Access Projects",
         "button2": "Download CV"
     }
 }
