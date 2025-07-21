@@ -14,5 +14,43 @@
         "description": "Crio soluções digitais completas que unem desempenho, organização e visão de produto.",
         "button1": "Acessar Projetos",
         "button2": "Download CV"
+    },
+    "projects": {
+        "title": "Meus Projetos",
+        "sources": {
+            "vivacred": "Viva Cred",
+            "pessoal": "Pessoal",
+            "unisantos": "UNISANTOS",
+            "backsite": "Backsite - Serviços Online"
+        },
+        "noImage": "Prévia do Projeto",
+        "buttons": {
+            "view": "Ver Projeto",
+            "offline": "Indisponível"
+        },
+        "project1": {
+            "title": "ERP Financeiro Viva Cred",
+            "description": "Desenvolvi um ERP completo para gestão de operações financeiras da Viva Cred, com controle de produção, autenticação JWT, logs de segurança e integrações bancárias com Pan e Daycoval."
+        },
+        "project2": {
+            "title": "Gerador de Propostas Comerciais",
+            "description": "Sistema pessoal para automatizar propostas comerciais com cadastro de produtos, cálculo automático de impostos e geração de PDFs. Utiliza TypeScript, Node.js e PostgreSQL com CI/CD via GitHub Actions."
+        },
+        "project3": {
+            "title": "Monitor de Consumo Residencial",
+            "description": "Aplicação acadêmica desenvolvida com professores da UNISANTOS para visualizar consumo de energia em residências. Utiliza Next.js, MongoDB e Tailwind para interface responsiva."
+        },
+        "project4": {
+            "title": "Painel da Secretaria de Turismo",
+            "description": "Painel interno para visualização de dados da Secretaria de Turismo de São Paulo. Desenvolvido com Vue.js, backend em Express e banco SQLite local para ambientes restritos."
+        },
+        "project5": {
+            "title": "Portal Dev News",
+            "description": "Portal pessoal com tutoriais e notícias sobre desenvolvimento web. Usa Angular, Firebase e Bootstrap. Sistema de comentários e favoritação em tempo real."
+        },
+        "project6": {
+            "title": "Dashboard de Análise de Sentimentos",
+            "description": "Dashboard criado durante projeto de pesquisa na UNISANTOS com foco em análise de sentimentos de notícias de mercado. Backend com Django e PostgreSQL, front-end com Svelte."
+        }
     }
 }

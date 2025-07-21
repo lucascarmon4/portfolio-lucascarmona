@@ -1,7 +1,16 @@
 import EmblaCarousel from "../Carousel/EmblaCarousel";
-import projects from "../../data/projects.json";
+import projectsRaw from "../../data/projects.json";
+import { useTranslation } from "react-i18next";
 
 function ProjectsSection() {
+    const { t } = useTranslation();
+
+    const projects = projectsRaw.map((project) => ({
+        ...project,
+        title: t(`projects.${project.id}.title`),
+        description: t(`projects.${project.id}.description`),
+    }));
+
     return (
         <section
             id="projects"
@@ -11,7 +20,7 @@ function ProjectsSection() {
                 className="text-3xl sm:text-4xl font-bold mb-12 text-center"
                 data-aos="zoom-in-up"
             >
-                MEUS PROJETOS
+                {t("projects.title").toUpperCase()}
             </h2>
 
             <EmblaCarousel

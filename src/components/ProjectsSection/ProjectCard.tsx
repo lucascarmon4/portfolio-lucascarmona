@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import Button from "../Button";
 
 type Props = {
@@ -21,6 +22,8 @@ function ProjectCard({
     source,
     isOffline = false,
 }: Props) {
+    const { t } = useTranslation();
+
     return (
         <div
             data-aos="fade-down"
@@ -36,7 +39,7 @@ function ProjectCard({
                         className="h-full w-full object-cover"
                     />
                 ) : (
-                    "Prévia do Projeto"
+                    t("projects.noImage")
                 )}
             </div>
 
@@ -51,7 +54,7 @@ function ProjectCard({
                     <div className="flex items-center flex-wrap gap-2 mb-2">
                         {source && (
                             <span className="text-xs px-2 py-0.5 rounded-full bg-white/10 border border-white/20 text-gray-200">
-                                {source}
+                                {t(`projects.sources.${source}`)}
                             </span>
                         )}
                         {isOffline && (
@@ -86,7 +89,9 @@ function ProjectCard({
                     }}
                     disabled={isOffline}
                 >
-                    {isOffline ? "Indisponível" : "Acessar projeto"}
+                    {isOffline
+                        ? t("projects.buttons.offline")
+                        : t("projects.buttons.view")}
                 </Button>
             </div>
         </div>

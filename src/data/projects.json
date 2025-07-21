@@ -1,50 +1,44 @@
 [
     {
-        "title": "Projeto 1",
-        "description": "Desenvolvi um ERP completo para gestão de operações financeiras da Viva Cred, com funcionalidades como controle de produção, autenticação com JWT, logs de segurança e integrações bancárias com o Banco Pan e Daycoval. Utilizei React no front-end e PHP/MySQL no back-end.",
+        "id": "project1",
         "techs": ["React", "PHP", "MySQL"],
         "link": "https://github.com/seu-projeto",
-        "source": "Viva Cred",
+        "source": "vivacred",
         "isOffline": false
     },
     {
-        "title": "Projeto 2",
-        "description": "Sistema pessoal desenvolvido para automatizar a geração de propostas comerciais. Inclui cadastro de produtos, cálculo automático de impostos e geração de PDFs. Utilizei TypeScript com Node.js e PostgreSQL, e implementei CI/CD com GitHub Actions.",
+        "id": "project2",
         "techs": ["TypeScript", "Node.js", "PostgreSQL"],
         "link": "https://github.com/seu-projeto2",
-        "source": "Pessoal",
+        "source": "pessoal",
         "isOffline": false
     },
     {
-        "title": "Projeto 3",
-        "description": "Aplicação acadêmica desenvolvida em parceria com professores da UNISANTOS para visualização de consumo de energia em ambientes residenciais. Utiliza Next.js para SSR, MongoDB para armazenamento dos dados históricos e Tailwind para interface responsiva.",
+        "id": "project3",
         "techs": ["Next.js", "MongoDB", "Tailwind CSS"],
         "link": "https://github.com/seu-projeto3",
-        "source": "UNISANTOS",
+        "source": "unisantos",
         "isOffline": true
     },
     {
-        "title": "Projeto 4",
-        "description": "Painel administrativo interno desenvolvido para a empresa Backsite, com foco na visualização de dados da Secretaria de Turismo de São Paulo. Utilizei Vue.js no front, backend com Express e banco SQLite local, ideal para ambientes de rede restrita.",
+        "id": "project4",
         "techs": ["Vue.js", "Express", "SQLite"],
         "link": "https://github.com/seu-projeto4",
-        "source": "Backsite",
+        "source": "backsite",
         "isOffline": true
     },
     {
-        "title": "Projeto 5",
-        "description": "Portal pessoal de notícias e tutoriais sobre desenvolvimento web. Utiliza Angular com Firebase para autenticação e armazenamento, e Bootstrap para um layout acessível e responsivo. Sistema de comentários e favoritação em tempo real.",
+        "id": "project5",
         "techs": ["Angular", "Firebase", "Bootstrap"],
         "link": "https://github.com/seu-projeto5",
-        "source": "Pessoal",
+        "source": "pessoal",
         "isOffline": false
     },
     {
-        "title": "Projeto 6",
-        "description": "Dashboard desenvolvido em grupo durante projeto de pesquisa da UNISANTOS, com foco em análise de sentimentos de notícias de mercado. Backend com Django, banco relacional PostgreSQL e front-end interativo com Svelte.",
+        "id": "project6",
         "techs": ["Svelte", "Django", "PostgreSQL"],
         "link": "https://github.com/seu-projeto6",
-        "source": "UNISANTOS",
+        "source": "unisantos",
         "isOffline": false
     }
 ]

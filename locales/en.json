@@ -14,5 +14,43 @@
         "description": "I create complete digital solutions that combine performance, organization, and product vision.",
         "button1": "Access Projects",
         "button2": "Download CV"
+    },
+    "projects": {
+        "title": "My Projects",
+        "sources": {
+            "vivacred": "Viva Cred",
+            "pessoal": "Personal",
+            "unisantos": "UNISANTOS",
+            "backsite": "Backsite"
+        },
+        "noImage": "Project Preview",
+        "buttons": {
+            "view": "View Project",
+            "offline": "Unavailable"
+        },
+        "project1": {
+            "title": "Viva Cred Financial ERP",
+            "description": "I developed a complete ERP for financial operations at Viva Cred, including production control, JWT authentication, security logs, and banking integrations with Pan and Daycoval."
+        },
+        "project2": {
+            "title": "Commercial Proposal Generator",
+            "description": "A personal system to automate commercial proposals with product registration, automatic tax calculation, and PDF generation. Built with TypeScript, Node.js, PostgreSQL and GitHub Actions CI/CD."
+        },
+        "project3": {
+            "title": "Residential Energy Monitor",
+            "description": "Academic project in collaboration with UNISANTOS to visualize energy consumption in households. Uses Next.js for SSR, MongoDB for storage, and Tailwind for a responsive UI."
+        },
+        "project4": {
+            "title": "Tourism Secretariat Dashboard",
+            "description": "Internal dashboard for viewing São Paulo Tourism Secretariat data. Built with Vue.js, Express backend, and SQLite for local usage in restricted networks."
+        },
+        "project5": {
+            "title": "Dev News Portal",
+            "description": "Personal portal with web development news and tutorials. Built with Angular, Firebase for auth/storage, and Bootstrap. Includes real-time commenting and favoriting."
+        },
+        "project6": {
+            "title": "Sentiment Analysis Dashboard",
+            "description": "Dashboard built for a UNISANTOS research project focused on market news sentiment analysis. Backend in Django with PostgreSQL and frontend using Svelte."
+        }
     }
 }
