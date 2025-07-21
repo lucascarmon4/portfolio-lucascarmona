@@ -7,13 +7,13 @@
             "contact": "Contato"
         },
         "button1": "Acessar Projetos",
-        "button2": "Download CV"
+        "button2": "Baixar CV"
     },
     "hero": {
         "title": "DESENVOLVEDOR FULLSTACK <br /> COM FOCO EM RESULTADOS.",
         "description": "Crio soluções digitais completas que unem desempenho, organização e visão de produto.",
         "button1": "Acessar Projetos",
-        "button2": "Download CV"
+        "button2": "Baixar CV"
     },
     "projects": {
         "title": "Meus Projetos",
@@ -71,6 +71,8 @@
     },
     "qualifications": {
         "title": "Qualificações",
+        "seeAllOnLinkedIn": "Ver todos os certificados no LinkedIn",
+        "seeCredential": "Ver credencial",
         "qualification1": {
             "title": "Certificação AWS",
             "company": "AWS Academy",
@@ -91,5 +93,19 @@
             "description": "Curso completo de JavaScript, abordando desde o básico até conceitos avançados.",
             "link": "https://www.linkedin.com/in/lucas-carmona-neto/details/certifications/"
         }
+    },
+    "contact": {
+        "mainTitle": "Entre em Contato",
+        "form": {
+            "title": "Envie uma mensagem",
+            "description": "Estou sempre aberto a novas oportunidades e colaborações. Se você tem uma ideia, projeto ou apenas quer conversar, sinta-se à vontade para me enviar uma mensagem.",
+            "name": "Nome",
+            "email": "Email",
+            "message": "Digite sua mensagem",
+            "submit": "Enviar"
+        }
+    },
+    "footer": {
+        "text": "© 2025 Lucas Carmona Neto. Todos os direitos reservados."
     }
 }

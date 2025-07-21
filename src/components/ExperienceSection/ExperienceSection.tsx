@@ -120,7 +120,7 @@ const ExperienceSection = () => {
                                 target="_blank"
                                 className="text-primary font-semibold hover:underline"
                             >
-                                Ver todos os certificados no LinkedIn ↗
+                                {t("qualifications.seeAllOnLinkedIn")} ↗
                             </a>
                         </div>
                     </>

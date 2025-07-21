@@ -71,6 +71,8 @@
     },
     "qualifications": {
         "title": "Qualifications",
+        "seeAllOnLinkedIn": "See all certifications on LinkedIn",
+        "seeCredential": "See credential",
         "qualification1": {
             "title": "AWS Certification",
             "company": "AWS Academy",
@@ -91,5 +93,19 @@
             "description": "Comprehensive JavaScript course covering from basics to advanced topics.",
             "link": "https://www.linkedin.com/in/lucas-carmona-neto/details/certifications/"
         }
+    },
+    "contact": {
+        "mainTitle": "Get in Touch",
+        "form": {
+            "title": "Contact Form",
+            "description": "Feel free to reach out for collaborations, questions, or just to connect!",
+            "name": "Name",
+            "email": "Email",
+            "message": "Type your message",
+            "submit": "Send"
+        }
+    },
+    "footer": {
+        "text": "© 2025 Lucas Carmona Neto. All rights reserved."
     }
 }

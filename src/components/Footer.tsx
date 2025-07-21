@@ -1,18 +1,20 @@
+import { useTranslation } from "react-i18next";
+
 function Footer() {
+    const { t } = useTranslation();
+
     return (
         <footer className="bg-[#0a0a0a] text-white px-6 pt-10 pb-6">
             <div className="max-w-7xl mx-auto border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center">
                 {/* Logo + direitos */}
                 <div className="w-full sm:w-auto text-sm text-white/30 flex justify-between items-center mb-6 sm:mb-0">
                     <span className="font-['Michroma'] text-xs">LC</span>
-                    <span className="sm:hidden block">
-                        Todos os direitos reservados
-                    </span>
+                    <span className="sm:hidden block">{t("footer.text")}</span>
                 </div>
 
                 {/* Direitos no lado direito (desktop) */}
                 <div className="hidden sm:block text-sm text-white/30">
-                    Todos os direitos reservados
+                    {t("footer.text")}
                 </div>
             </div>
 
@@ -40,9 +42,6 @@ function Footer() {
                         className="hover-underline"
                     >
                         LINKEDIN
-                    </a>
-                    <a href="tel:+5513996251308" className="hover-underline">
-                        TELEFONE
                     </a>
                 </div>
             </div>

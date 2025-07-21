@@ -1,6 +1,9 @@
+import { useTranslation } from "react-i18next";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 function ContactSection() {
+    const { t } = useTranslation();
+
     return (
         <section
             id="contact"
@@ -10,7 +13,7 @@ function ContactSection() {
                 className="hidden sm:block sm:text-5xl font-extrabold text-center mb-12"
                 data-aos="zoom-in-up"
             >
-                ENTRE EM CONTATO
+                {t("contact.mainTitle").toUpperCase()}
             </h2>
 
             <div
@@ -18,11 +21,10 @@ function ContactSection() {
                 data-aos="zoom-in-up"
             >
                 <h3 className="text-xl sm:text-2xl font-bold text-center mb-2">
-                    ENVIE UMA MENSAGEM
+                    {t("contact.form.title").toUpperCase()}
                 </h3>
                 <p className="text-sm sm:text-base text-white/60 text-center mb-8 px-2">
-                    Fique à vontade para escrever, se for bug, job ou café, eu
-                    topo conversar.
+                    {t("contact.form.description")}
                 </p>
 
                 <form className="flex flex-col gap-5">
@@ -30,20 +32,20 @@ function ContactSection() {
                         data-aos="fade-right"
                         data-aos-delay={0}
                         type="text"
-                        placeholder="Nome"
+                        placeholder={t("contact.form.name")}
                         className="bg-black border border-white/20 text-sm sm:text-base text-white px-5 py-3 rounded-md placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-primary"
                     />
                     <input
                         data-aos="fade-right"
                         data-aos-delay={50}
                         type="email"
-                        placeholder="Email"
+                        placeholder={t("contact.form.email")}
                         className="bg-black border border-white/20 text-sm sm:text-base text-white px-5 py-3 rounded-md placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-primary"
                     />
                     <textarea
                         data-aos="fade-right"
                         data-aos-delay={100}
-                        placeholder="Digite sua mensagem"
+                        placeholder={t("contact.form.message")}
                         rows={6}
                         className="bg-black border border-white/20 text-sm sm:text-base text-white px-5 py-3 rounded-md placeholder:text-white/30 resize-none focus:outline-none focus:ring-2 focus:ring-primary"
                     />
@@ -85,7 +87,7 @@ function ContactSection() {
                         type="submit"
                         className="w-full bg-white text-black font-semibold py-3 text-base sm:text-lg rounded-md hover:bg-primary hover:text-white transition-all hover:translate-y-[-4px] duration-300"
                     >
-                        ENVIAR
+                        {t("contact.form.submit").toUpperCase()}
                     </button>
                 </div>
             </div>

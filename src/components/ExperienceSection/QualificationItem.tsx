@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 type Props = {
     title: string;
     company: string;
@@ -15,6 +17,8 @@ function QualificationItem({
     link,
     idx,
 }: Props) {
+    const { t } = useTranslation();
+
     return (
         <div
             className="mb-10"
@@ -34,7 +38,7 @@ function QualificationItem({
                     target="_blank"
                     className="text-primary text-sm mt-2 inline-block hover:underline"
                 >
-                    Ver credencial ↗
+                    {t("qualifications.seeCredential")} ↗
                 </a>
             )}
         </div>
