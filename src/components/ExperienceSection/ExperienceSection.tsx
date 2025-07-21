@@ -2,7 +2,6 @@ import { useRef, useState, useEffect } from "react";
 import { FaBriefcase, FaGraduationCap } from "react-icons/fa";
 import QualificationItem from "./QualificationItem";
 import ExperienceItem from "./ExperienceItem";
-import qualifications from "../../data/qualifications.json";
 import { useTranslation } from "react-i18next";
 
 const ExperienceSection = () => {
@@ -35,6 +34,20 @@ const ExperienceSection = () => {
         description: t(`experiences.${key}.description`),
     }));
 
+    const qualificationKeys = [
+        "qualification1",
+        "qualification2",
+        "qualification3",
+    ];
+
+    const qualifications = qualificationKeys.map((key) => ({
+        title: t(`qualifications.${key}.title`),
+        company: t(`qualifications.${key}.company`),
+        period: t(`qualifications.${key}.period`),
+        description: t(`qualifications.${key}.description`),
+        link: t(`qualifications.${key}.link`, ""), // "" como fallback caso não exista
+    }));
+
     const data = activeTab === "experiences" ? experiences : qualifications;
 
     return (
@@ -46,7 +59,7 @@ const ExperienceSection = () => {
                 className="text-3xl sm:text-4xl font-bold mb-8 text-center"
                 data-aos="zoom-in-up"
             >
-                EXPERIÊNCIAS E QUALIFICAÇÕES
+                {t("experiences.mainTitle").toUpperCase()}
             </h2>
 
             <div
@@ -72,7 +85,7 @@ const ExperienceSection = () => {
                     }`}
                 >
                     <FaBriefcase size={25} />
-                    EXPERIÊNCIAS
+                    {t("experiences.title").toUpperCase()}
                 </button>
                 <button
                     ref={qualificationsRef}
@@ -84,7 +97,7 @@ const ExperienceSection = () => {
                     }`}
                 >
                     <FaGraduationCap size={25} />
-                    QUALIFICAÇÕES
+                    {t("qualifications.title").toUpperCase()}
                 </button>
             </div>
 

@@ -54,6 +54,7 @@
         }
     },
     "experiences": {
+        "mainTitle": "Experiências e Qualificações",
         "title": "Experiências",
         "experience1": {
             "title": "Desenvolvedor Fullstack Sênior",
@@ -66,6 +67,29 @@
             "company": "Outra Empresa",
             "period": "2022 – 2023",
             "description": "- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        }
+    },
+    "qualifications": {
+        "title": "Qualificações",
+        "qualification1": {
+            "title": "Certificação AWS",
+            "company": "AWS Academy",
+            "period": "2023",
+            "description": "Curso de fundamentos em cloud com foco em infraestrutura...",
+            "link": "https://www.linkedin.com/in/lucas-carmona-neto/details/certifications/"
+        },
+        "qualification2": {
+            "title": "Certificação em React",
+            "company": "Curso Online",
+            "period": "2022",
+            "description": "Curso avançado de React com foco em desenvolvimento de aplicações web."
+        },
+        "qualification3": {
+            "title": "Certificação em JavaScript",
+            "company": "Curso Online",
+            "period": "2021",
+            "description": "Curso completo de JavaScript, abordando desde o básico até conceitos avançados.",
+            "link": "https://www.linkedin.com/in/lucas-carmona-neto/details/certifications/"
         }
     }
 }
