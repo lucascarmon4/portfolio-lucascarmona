@@ -102,7 +102,18 @@
             "name": "Nome",
             "email": "Email",
             "message": "Digite sua mensagem",
-            "submit": "Enviar"
+            "submit": "Enviar",
+            "sending": "Enviando...",
+            "success": "Mensagem enviada com sucesso!",
+            "error": "Erro ao enviar mensagem. Tente novamente.",
+            "validation": {
+                "nameMin": "Nome deve ter pelo menos 2 caracteres",
+                "nameMax": "Nome deve ter no máximo 50 caracteres",
+                "emailInvalid": "Por favor, insira um email válido",
+                "messageMin": "Mensagem deve ter pelo menos 5 caracteres",
+                "messageMax": "Mensagem deve ter no máximo 500 caracteres",
+                "error": "Por favor, corrija os erros no formulário"
+            }
         }
     },
     "footer": {

@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import Button from "./Button";
 import { Link } from "react-scroll";
 import i18n from "../utils/i18n";
+import { TypeAnimation } from "react-type-animation";
 
 function Hero() {
     const { t } = useTranslation();

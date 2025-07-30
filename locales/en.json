@@ -102,7 +102,18 @@
             "name": "Name",
             "email": "Email",
             "message": "Type your message",
-            "submit": "Send"
+            "submit": "Send",
+            "sending": "Sending...",
+            "success": "Message sent successfully!",
+            "error": "Error sending message. Please try again.",
+            "validation": {
+                "nameMin": "Name must be at least 2 characters",
+                "nameMax": "Name must be at most 50 characters",
+                "emailInvalid": "Please enter a valid email",
+                "messageMin": "Message must be at least 5 characters",
+                "messageMax": "Message must be at most 500 characters",
+                "error": "Please fix the errors in the form"
+            }
         }
     },
     "footer": {

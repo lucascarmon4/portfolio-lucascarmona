@@ -5,9 +5,29 @@ function CustomCursor() {
     const [trailCursor, setTrailCursor] = useState({ x: 0, y: 0 });
     const [isPointer, setIsPointer] = useState(false);
     const [isText, setIsText] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    // Detecta se é dispositivo móvel
+    useEffect(() => {
+        const checkMobile = () => {
+            const isMobileDevice =
+                /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                    navigator.userAgent
+                ) ||
+                window.innerWidth <= 768 ||
+                "ontouchstart" in window;
+            setIsMobile(isMobileDevice);
+        };
+
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
 
     // Atualiza posição do cursor real
     useEffect(() => {
+        if (isMobile) return; // Não adiciona listener em dispositivos móveis
+
         const move = (e: MouseEvent) => {
             const { clientX, clientY } = e;
             setRealCursor({ x: clientX, y: clientY });
@@ -33,10 +53,12 @@ function CustomCursor() {
 
         window.addEventListener("mousemove", move);
         return () => window.removeEventListener("mousemove", move);
-    }, []);
+    }, [isMobile]);
 
     // Rastro suavizado com animação frame a frame
     useEffect(() => {
+        if (isMobile) return; // Não executa animação em dispositivos móveis
+
         let animationFrameId: number;
 
         const smoothFollow = () => {
@@ -55,7 +77,7 @@ function CustomCursor() {
 
         animationFrameId = requestAnimationFrame(smoothFollow);
         return () => cancelAnimationFrame(animationFrameId);
-    }, [realCursor]);
+    }, [realCursor, isMobile]);
 
     // Detecta se é campo de texto
     function isTextElement(el: Element): boolean {
@@ -74,44 +96,49 @@ function CustomCursor() {
 
     return (
         <>
-            {/* Rastro com blur */}
-            <div
-                className="fixed top-0 left-0 pointer-events-none z-[9998]"
-                style={{
-                    transform: `translate(${trailCursor.x - 40}px, ${
-                        trailCursor.y - 40
-                    }px)`,
-                }}
-            >
-                <div className="w-20 h-20 rounded-full bg-primary opacity-30 blur-xl mix-blend-screen" />
-            </div>
-
-            {/* Cursor principal */}
-            <div
-                className="fixed top-0 left-0 pointer-events-none z-[9999] transition-transform duration-150 ease-out"
-                style={{
-                    transform: isText
-                        ? `translate(${realCursor.x - 0.5}px, ${
-                              realCursor.y - 12
-                          }px)`
-                        : `translate(${realCursor.x - 8}px, ${
-                              realCursor.y - 8
-                          }px)`,
-                }}
-            >
-                {isText ? (
-                    <div className="w-px h-6 bg-primary animate-pulse" />
-                ) : (
+            {/* Só renderiza o cursor customizado em dispositivos desktop */}
+            {!isMobile && (
+                <>
+                    {/* Rastro com blur */}
                     <div
-                        className={`transition-all duration-150 ease-out rounded-full mix-blend-difference 
-                        ${
-                            isPointer
-                                ? "w-4 h-4 border bg-primary border-white"
-                                : "w-4 h-4 border border-primary bg-transparent"
-                        }`}
-                    />
-                )}
-            </div>
+                        className="fixed top-0 left-0 pointer-events-none z-[9998]"
+                        style={{
+                            transform: `translate(${trailCursor.x - 40}px, ${
+                                trailCursor.y - 40
+                            }px)`,
+                        }}
+                    >
+                        <div className="w-20 h-20 rounded-full bg-primary opacity-30 blur-xl mix-blend-screen" />
+                    </div>
+
+                    {/* Cursor principal */}
+                    <div
+                        className="fixed top-0 left-0 pointer-events-none z-[9999] transition-transform duration-150 ease-out"
+                        style={{
+                            transform: isText
+                                ? `translate(${realCursor.x - 0.5}px, ${
+                                      realCursor.y - 12
+                                  }px)`
+                                : `translate(${realCursor.x - 8}px, ${
+                                      realCursor.y - 8
+                                  }px)`,
+                        }}
+                    >
+                        {isText ? (
+                            <div className="w-px h-6 bg-primary animate-pulse" />
+                        ) : (
+                            <div
+                                className={`transition-all duration-150 ease-out rounded-full mix-blend-difference 
+                                ${
+                                    isPointer
+                                        ? "w-4 h-4 border bg-primary border-white"
+                                        : "w-4 h-4 border border-primary bg-transparent"
+                                }`}
+                            />
+                        )}
+                    </div>
+                </>
+            )}
         </>
     );
 }
