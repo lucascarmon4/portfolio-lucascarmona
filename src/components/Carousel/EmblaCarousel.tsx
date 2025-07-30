@@ -13,7 +13,7 @@ type Project = {
     title: string;
     description: string;
     techs: string[];
-    link: string;
+    link?: string;
 };
 
 type PropType = {

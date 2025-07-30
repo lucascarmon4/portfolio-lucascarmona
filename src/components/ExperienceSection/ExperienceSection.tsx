@@ -25,7 +25,11 @@ const ExperienceSection = () => {
 
     const { t } = useTranslation();
 
-    const experienceKeys = ["experience1", "experience2"];
+    const experienceKeys = [
+        "viva_cred_2024",
+        "backsite_2023",
+        "viva_cred_2020",
+    ];
 
     const experiences = experienceKeys.map((key) => ({
         title: t(`experiences.${key}.title`),
@@ -35,9 +39,9 @@ const ExperienceSection = () => {
     }));
 
     const qualificationKeys = [
-        "qualification1",
-        "qualification2",
-        "qualification3",
+        "aws_cloud",
+        "laravel_alura",
+        "python_impressionador",
     ];
 
     const qualifications = qualificationKeys.map((key) => ({

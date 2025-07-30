@@ -10,7 +10,7 @@
         "button2": "Baixar CV"
     },
     "hero": {
-        "title": "DESENVOLVEDOR FULLSTACK <br /> COM FOCO EM RESULTADOS.",
+        "title": "DESENVOLVEDOR FULLSTACK",
         "description": "Crio soluções digitais completas que unem desempenho, organização e visão de produto.",
         "button1": "Acessar Projetos",
         "button2": "Baixar CV"
@@ -21,77 +21,88 @@
             "vivacred": "Viva Cred",
             "pessoal": "Pessoal",
             "unisantos": "UNISANTOS",
-            "backsite": "Backsite - Serviços Online"
+            "backsite": "Backsite"
         },
         "noImage": "Prévia do Projeto",
         "buttons": {
             "view": "Ver Projeto",
             "offline": "Indisponível"
         },
-        "project1": {
-            "title": "ERP Financeiro Viva Cred",
-            "description": "Desenvolvi um ERP completo para gestão de operações financeiras da Viva Cred, com controle de produção, autenticação JWT, logs de segurança e integrações bancárias com Pan e Daycoval."
+        "erp_vivacred": {
+            "title": "ERP Viva Cred",
+            "description": "Desenvolvi um ERP completo para gestão operacional e financeira da Viva Cred, com autenticação JWT, logs de auditoria e módulos como Produção, Clientes, Usuários, Relatórios, Estoque e Automação de processos."
         },
-        "project2": {
-            "title": "Gerador de Propostas Comerciais",
-            "description": "Sistema pessoal para automatizar propostas comerciais com cadastro de produtos, cálculo automático de impostos e geração de PDFs. Utiliza TypeScript, Node.js e PostgreSQL com CI/CD via GitHub Actions."
+        "ead_tecnoponta": {
+            "title": "Plataforma EAD Tecnoponta",
+            "description": "Desenvolvi do zero uma plataforma completa de ensino a distância (EAD) para a Tecnoponta. O sistema incluía autenticação de usuários, área do aluno, upload de aulas, trilhas de aprendizado e emissão de certificados. Construído com PHP, MySQL, HTML, CSS e JavaScript puro."
         },
-        "project3": {
-            "title": "Monitor de Consumo Residencial",
-            "description": "Aplicação acadêmica desenvolvida com professores da UNISANTOS para visualizar consumo de energia em residências. Utiliza Next.js, MongoDB e Tailwind para interface responsiva."
+        "smart_b3": {
+            "title": "Predição de Dados da B3 (SmartB3)",
+            "description": "Projeto acadêmico desenvolvido em grupo para predição de preços de ações da B3. O sistema utiliza modelos de Machine Learning (LSTM, GRU e XGBoost) para prever valores de curto e longo prazo e apresenta os dados em gráficos interativos. Inclui análise por setores e ranking de previsões."
         },
-        "project4": {
-            "title": "Painel da Secretaria de Turismo",
-            "description": "Painel interno para visualização de dados da Secretaria de Turismo de São Paulo. Desenvolvido com Vue.js, backend em Express e banco SQLite local para ambientes restritos."
+        "analyze_energy_costs": {
+            "title": "Analisador de Custos de Energia",
+            "description": "Projeto acadêmico que desenvolvi para analisar e comparar custos de energias renováveis e não renováveis. O sistema permite gerar gráficos interativos e realizar regressões preditivas para estimar custos futuros em X anos. Desenvolvido em equipe durante a graduação."
         },
-        "project5": {
-            "title": "Portal Dev News",
-            "description": "Portal pessoal com tutoriais e notícias sobre desenvolvimento web. Usa Angular, Firebase e Bootstrap. Sistema de comentários e favoritação em tempo real."
+        "public_vivacred": {
+            "title": "Site Público Viva Cred",
+            "description": "Desenvolvi o site público da Viva Cred, com interface moderna e responsiva em React + TypeScript, focado na apresentação dos serviços financeiros e facilitação de solicitações online."
         },
-        "project6": {
-            "title": "Dashboard de Análise de Sentimentos",
-            "description": "Dashboard criado durante projeto de pesquisa na UNISANTOS com foco em análise de sentimentos de notícias de mercado. Backend com Django e PostgreSQL, front-end com Svelte."
+        "farejador_produtos": {
+            "title": "Farejador de Produtos",
+            "description": "Plataforma desenvolvida como Data Warehouse para busca e análise de produtos do Mercado Livre. Contava com autenticação de usuários e permitia consultar dados detalhados sobre produtos e preços em um ambiente seguro e otimizado. Desenvolvido com PHP, MySQL, HTML, CSS e JavaScript puro."
+        },
+        "lucascarmona_portfolio": {
+            "title": "Portfólio Pessoal",
+            "description": "Este próprio site, desenvolvido do zero com React + Vite e Tailwind CSS, para apresentar meus projetos, experiências e habilidades. Possui design responsivo, animações modernas e suporte a múltiplos idiomas (PT/EN)."
         }
     },
     "experiences": {
         "mainTitle": "Experiências e Qualificações",
         "title": "Experiências",
-        "experience1": {
-            "title": "Desenvolvedor Fullstack Sênior",
-            "company": "Nome da Empresa",
-            "period": "2023 – 2024",
-            "description": "Lorem ipsum é uma simulação de texto da indústria tipográfica..."
+        "viva_cred_2024": {
+            "title": "Desenvolvedor Full-Stack",
+            "company": "Viva Cred",
+            "period": "mar/2024 – atual",
+            "description": "- Desenvolvi e implementei um ERP completo que centralizou os processos operacionais e financeiros da empresa, trazendo maior controle e produtividade.\n- Automatizei a prospecção de clientes com Python + Selenium, dobrando o volume de leads qualificados.\n- Criei sistema de autenticação JWT e logs de auditoria que fortaleceram a segurança e a rastreabilidade das operações internas.\n- Produzi tutoriais interativos que reduziram em 75% o tempo de onboarding de novos colaboradores."
         },
-        "experience2": {
-            "title": "Desenvolvedor Frontend Pleno",
-            "company": "Outra Empresa",
-            "period": "2022 – 2023",
-            "description": "- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        "backsite_2023": {
+            "title": "Desenvolvedor de Sistemas de Informação",
+            "company": "Backsite Serviços Online",
+            "period": "set/2023 – mar/2024",
+            "description": "- Desenvolvi um Data Warehouse em PHP/MySQL (MVC) que consolidou dados de vendedores do Mercado Livre e permitiu relatórios em tempo real, aumentando a eficiência das análises.\n- Criei uma plataforma EAD do zero para a Tecnoponta, permitindo que mais de 1000 alunos tivessem acesso remoto a conteúdos e certificados digitais.\n- Desenvolvi um sistema de agenda pública para a Secretaria de Turismo de SP que reduziu significativamente o tempo de publicação de eventos.\n- Participei do planejamento estratégico de projetos, garantindo entregas dentro do prazo e do escopo."
+        },
+        "viva_cred_2020": {
+            "title": "Desenvolvedor Full-Stack",
+            "company": "Viva Cred",
+            "period": "jan/2020 – set/2023",
+            "description": "- Liderei o design e a implementação do site público da empresa em React + TypeScript, aumentando a presença digital e a credibilidade da marca.\n- Desenvolvi automações que substituíram tarefas manuais repetitivas, liberando a equipe para atividades mais estratégicas e aumentando a eficiência operacional.\n- Identifiquei e implementei em média 4 novos fluxos automatizados por trimestre, trazendo melhorias contínuas nos processos internos."
         }
     },
     "qualifications": {
         "title": "Qualificações",
         "seeAllOnLinkedIn": "Ver todos os certificados no LinkedIn",
         "seeCredential": "Ver credencial",
-        "qualification1": {
-            "title": "Certificação AWS",
+        "aws_cloud": {
+            "title": "AWS Academy Cloud Foundations",
             "company": "AWS Academy",
-            "period": "2023",
-            "description": "Curso de fundamentos em cloud com foco em infraestrutura...",
-            "link": "https://www.linkedin.com/in/lucas-carmona-neto/details/certifications/"
+            "period": "2025",
+            "description": "Curso oficial da AWS Academy com fundamentos de computação em nuvem e foco em infraestrutura AWS.",
+            "link": "https://www.credly.com/badges/7baafa74-746b-4e95-a167-497d8d91a037/print"
         },
-        "qualification2": {
-            "title": "Certificação em React",
-            "company": "Curso Online",
-            "period": "2022",
-            "description": "Curso avançado de React com foco em desenvolvimento de aplicações web."
+        "laravel_alura": {
+            "title": "Laravel: Crie aplicações web em PHP",
+            "company": "Alura",
+            "period": "2024",
+            "description": "Formação completa em Laravel pela Alura, abordando desde a configuração do framework até a criação de aplicações web robustas.",
+            "link": "https://cursos.alura.com.br/degree/certificate/f7bc6dfb-c51f-4915-91b3-927672ae5452?lang=pt"
         },
-        "qualification3": {
-            "title": "Certificação em JavaScript",
-            "company": "Curso Online",
-            "period": "2021",
-            "description": "Curso completo de JavaScript, abordando desde o básico até conceitos avançados.",
-            "link": "https://www.linkedin.com/in/lucas-carmona-neto/details/certifications/"
+        "python_impressionador": {
+            "title": "Python Impressionador - 176 horas",
+            "company": "Hashtag Treinamentos",
+            "period": "2024",
+            "description": "Formação completa em Python com 176 horas de prática, incluindo automação, análise de dados e desenvolvimento de aplicações.",
+            "link": "https://portalhashtag.com/validacao-certificado/1708536962757x737986950154158000"
         }
     },
     "contact": {

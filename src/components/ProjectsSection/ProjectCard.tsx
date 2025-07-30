@@ -6,7 +6,7 @@ type Props = {
     description: string;
     techs: string[];
     image?: string;
-    link: string;
+    link?: string;
     idx: number;
     source?: string;
     isOffline?: boolean;
@@ -87,9 +87,9 @@ function ProjectCard({
                     onClick={() => {
                         if (!isOffline) window.open(link, "_blank");
                     }}
-                    disabled={isOffline}
+                    disabled={isOffline || !link}
                 >
-                    {isOffline
+                    {isOffline || !link
                         ? t("projects.buttons.offline")
                         : t("projects.buttons.view")}
                 </Button>

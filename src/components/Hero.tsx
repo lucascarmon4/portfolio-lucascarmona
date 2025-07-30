@@ -14,11 +14,20 @@ function Hero() {
         >
             {/* Conteúdo central */}
             <div className="text-center max-w-2xl">
-                <h1
+                <TypeAnimation
+                    key={language}
+                    sequence={[
+                        "LUCAS CARMONA NETO",
+                        2000,
+                        t("hero.title"),
+                        2000,
+                    ]}
+                    wrapper="h1"
                     className="text-2xl sm:text-3xl md:text-4xl font-['Inter400'] font-bold leading-tight mb-6"
-                    data-aos="fade-down"
-                    data-delay={0}
-                    dangerouslySetInnerHTML={{ __html: t("hero.title") }}
+                    cursor={true}
+                    repeat={Infinity}
+                    speed={20}
+                    deletionSpeed={30}
                 />
 
                 <p

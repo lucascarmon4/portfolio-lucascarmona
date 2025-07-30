@@ -10,7 +10,7 @@
         "button2": "Download CV"
     },
     "hero": {
-        "title": "FULLSTACK DEVELOPER <br /> FOCUSED ON RESULTS.",
+        "title": "FULLSTACK DEVELOPER",
         "description": "I create complete digital solutions that combine performance, organization, and product vision.",
         "button1": "Access Projects",
         "button2": "Download CV"
@@ -28,70 +28,81 @@
             "view": "View Project",
             "offline": "Unavailable"
         },
-        "project1": {
-            "title": "Viva Cred Financial ERP",
-            "description": "I developed a complete ERP for financial operations at Viva Cred, including production control, JWT authentication, security logs, and banking integrations with Pan and Daycoval."
+        "erp_vivacred": {
+            "title": "Viva Cred ERP",
+            "description": "I developed a complete ERP system for Viva Cred's operational and financial management, featuring JWT authentication, audit logs, and modules such as Production, Clients, Users, Reports, Inventory, and Process Automation."
         },
-        "project2": {
-            "title": "Commercial Proposal Generator",
-            "description": "A personal system to automate commercial proposals with product registration, automatic tax calculation, and PDF generation. Built with TypeScript, Node.js, PostgreSQL and GitHub Actions CI/CD."
+        "ead_tecnoponta": {
+            "title": "Tecnoponta E-learning Platform",
+            "description": "I built from scratch a complete e-learning platform for Tecnoponta. The system included user authentication, student dashboard, class uploads, learning paths, and certificate generation. Developed using PHP, MySQL, HTML, CSS, and vanilla JavaScript."
         },
-        "project3": {
-            "title": "Residential Energy Monitor",
-            "description": "Academic project in collaboration with UNISANTOS to visualize energy consumption in households. Uses Next.js for SSR, MongoDB for storage, and Tailwind for a responsive UI."
+        "smart_b3": {
+            "title": "B3 Data Prediction (SmartB3)",
+            "description": "An academic group project for predicting B3 stock prices. The system applies Machine Learning models (LSTM, GRU, and XGBoost) to forecast short- and long-term prices and displays the data through interactive charts. It also includes sector analysis and prediction ranking."
         },
-        "project4": {
-            "title": "Tourism Secretariat Dashboard",
-            "description": "Internal dashboard for viewing São Paulo Tourism Secretariat data. Built with Vue.js, Express backend, and SQLite for local usage in restricted networks."
+        "analyze_energy_costs": {
+            "title": "Energy Cost Analyzer",
+            "description": "An academic project I developed to analyze and compare renewable and non-renewable energy costs. The system generates interactive charts and performs predictive regressions to estimate future costs in X years. Developed as a team during college."
         },
-        "project5": {
-            "title": "Dev News Portal",
-            "description": "Personal portal with web development news and tutorials. Built with Angular, Firebase for auth/storage, and Bootstrap. Includes real-time commenting and favoriting."
+        "public_vivacred": {
+            "title": "Viva Cred Public Website",
+            "description": "Built the public website for Viva Cred using React + TypeScript. Designed a modern, responsive interface showcasing financial services and enabling seamless online requests."
         },
-        "project6": {
-            "title": "Sentiment Analysis Dashboard",
-            "description": "Dashboard built for a UNISANTOS research project focused on market news sentiment analysis. Backend in Django with PostgreSQL and frontend using Svelte."
+        "farejador_produtos": {
+            "title": "Farejador de Produtos",
+            "description": "A Data Warehouse platform developed to search and analyze Mercado Livre products. Included user authentication and allowed users to consult detailed product and price data in a secure, optimized environment. Built using PHP, MySQL, HTML, CSS, and vanilla JavaScript."
+        },
+        "lucascarmona_portfolio": {
+            "title": "Personal Portfolio",
+            "description": "This very website, built from scratch with React + Vite and Tailwind CSS, to showcase my projects, experience, and skills. Features a responsive design, modern animations, and multi-language support (PT/EN)."
         }
     },
     "experiences": {
         "mainTitle": "Experience and Qualifications",
         "title": "Experience",
-        "experience1": {
-            "title": "Senior Fullstack Developer",
-            "company": "Company Name",
-            "period": "2023 – 2024",
-            "description": "Lorem ipsum is placeholder text commonly used in the typesetting industry..."
+        "viva_cred_2024": {
+            "title": "Full-Stack Developer",
+            "company": "Viva Cred",
+            "period": "Mar/2024 – Present",
+            "description": "- Designed and implemented a full ERP system that centralized the company's operational and financial processes, improving control and productivity.\n- Automated client prospecting with Python + Selenium, doubling the volume of qualified leads.\n- Developed a JWT authentication system and audit logs that strengthened security and internal operations traceability.\n- Produced interactive tutorials that reduced new employee onboarding time by 75%."
         },
-        "experience2": {
-            "title": "Frontend Developer",
-            "company": "Another Company",
-            "period": "2022 – 2023",
-            "description": "- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        "backsite_2023": {
+            "title": "Information Systems Developer",
+            "company": "Backsite Serviços Online",
+            "period": "Sep/2023 – Mar/2024",
+            "description": "- Built a PHP/MySQL (MVC) Data Warehouse that consolidated Mercado Livre seller data and enabled real-time reports, improving analysis efficiency.\n- Created an e-learning platform from scratch for Tecnoponta, allowing over 1,000 students to remotely access content and digital certificates.\n- Developed a public event scheduling system for São Paulo’s Tourism Department that significantly reduced event publishing time.\n- Participated in project strategic planning, ensuring on-time and in-scope deliveries."
+        },
+        "viva_cred_2020": {
+            "title": "Full-Stack Developer",
+            "company": "Viva Cred",
+            "period": "Jan/2020 – Sep/2023",
+            "description": "- Led the design and development of the company's public website in React + TypeScript, enhancing digital presence and brand credibility.\n- Built automations that replaced repetitive manual tasks, freeing up the team for more strategic activities and increasing operational efficiency.\n- Identified and implemented an average of four new automated workflows per quarter, driving continuous improvements in internal processes."
         }
     },
     "qualifications": {
         "title": "Qualifications",
         "seeAllOnLinkedIn": "See all certifications on LinkedIn",
         "seeCredential": "See credential",
-        "qualification1": {
-            "title": "AWS Certification",
+        "aws_cloud": {
+            "title": "AWS Academy Cloud Foundations",
             "company": "AWS Academy",
-            "period": "2023",
-            "description": "Fundamentals course in cloud computing focused on infrastructure.",
-            "link": "https://www.linkedin.com/in/lucas-carmona-neto/details/certifications/"
+            "period": "2025",
+            "description": "Official AWS Academy course covering cloud computing fundamentals with a focus on AWS infrastructure.",
+            "link": "https://www.credly.com/badges/7baafa74-746b-4e95-a167-497d8d91a037/print"
         },
-        "qualification2": {
-            "title": "React Certification",
-            "company": "Online Course",
-            "period": "2022",
-            "description": "Advanced React course focused on building web applications."
+        "laravel_alura": {
+            "title": "Laravel: Build Web Applications in PHP",
+            "company": "Alura",
+            "period": "2024",
+            "description": "Comprehensive Laravel training by Alura, covering everything from framework setup to building robust web applications.",
+            "link": "https://cursos.alura.com.br/degree/certificate/f7bc6dfb-c51f-4915-91b3-927672ae5452?lang=pt"
         },
-        "qualification3": {
-            "title": "JavaScript Certification",
-            "company": "Online Course",
-            "period": "2021",
-            "description": "Comprehensive JavaScript course covering from basics to advanced topics.",
-            "link": "https://www.linkedin.com/in/lucas-carmona-neto/details/certifications/"
+        "python_impressionador": {
+            "title": "Python Impressionador - 176 hours",
+            "company": "Hashtag Treinamentos",
+            "period": "2024",
+            "description": "Complete Python training with 176 hours of practice, including automation, data analysis, and application development.",
+            "link": "https://portalhashtag.com/validacao-certificado/1708536962757x737986950154158000"
         }
     },
     "contact": {

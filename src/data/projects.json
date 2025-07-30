@@ -1,44 +1,62 @@
 [
     {
-        "id": "project1",
-        "techs": ["React", "PHP", "MySQL"],
-        "link": "https://github.com/seu-projeto",
+        "id": "erp_vivacred",
+        "techs": ["React", "TypeScript", "PHP", "MySQL", "JWT"],
         "source": "vivacred",
+        "image": "/images/projects/erp_vivacred.png",
         "isOffline": false
     },
     {
-        "id": "project2",
-        "techs": ["TypeScript", "Node.js", "PostgreSQL"],
-        "link": "https://github.com/seu-projeto2",
-        "source": "pessoal",
+        "id": "ead_tecnoponta",
+        "techs": ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
+        "link": "https://aluno.tecnoponta.com.br",
+        "source": "backsite",
+        "image": "/images/projects/ead_tecnoponta.png",
         "isOffline": false
     },
     {
-        "id": "project3",
-        "techs": ["Next.js", "MongoDB", "Tailwind CSS"],
-        "link": "https://github.com/seu-projeto3",
+        "id": "smart_b3",
+        "techs": [
+            "React",
+            "Electron",
+            "Python",
+            "PostgreSQL",
+            "Scikit-learn",
+            "Chart.js"
+        ],
+        "link": "https://github.com/Portugol-Devoteers/pcg-5sem",
         "source": "unisantos",
-        "isOffline": true
+        "image": "/images/projects/smart_b3.png",
+        "isOffline": false
     },
     {
-        "id": "project4",
-        "techs": ["Vue.js", "Express", "SQLite"],
-        "link": "https://github.com/seu-projeto4",
+        "id": "analyze_energy_costs",
+        "techs": ["React", "Flask", "Python", "Chart.js", "Pandas", "i18n"],
+        "link": "https://github.com/Portugol-Devoteers/pcg-analyze-energy-costs",
+        "source": "unisantos",
+        "image": "/images/projects/analyze_energy_costs.png",
+        "isOffline": false
+    },
+    {
+        "id": "public_vivacred",
+        "techs": ["React", "TypeScript", "Tailwind CSS"],
+        "link": "https://www.vivacredpg.com.br",
+        "source": "vivacred",
+        "image": "/images/projects/public_vivacred.png",
+        "isOffline": false
+    },
+    {
+        "id": "farejador_produtos",
+        "techs": ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "MVC"],
         "source": "backsite",
         "isOffline": true
     },
     {
-        "id": "project5",
-        "techs": ["Angular", "Firebase", "Bootstrap"],
-        "link": "https://github.com/seu-projeto5",
+        "id": "lucascarmona_portfolio",
+        "techs": ["React", "Vite", "TypeScript", "Tailwind CSS", "i18next"],
+        "link": "https://github.com/lucascarmon4/portfolio",
         "source": "pessoal",
-        "isOffline": false
-    },
-    {
-        "id": "project6",
-        "techs": ["Svelte", "Django", "PostgreSQL"],
-        "link": "https://github.com/seu-projeto6",
-        "source": "unisantos",
+        "image": "/images/projects/lucascarmona_portfolio.png",
         "isOffline": false
     }
 ]
