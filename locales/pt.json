@@ -21,7 +21,8 @@
             "vivacred": "Viva Cred",
             "pessoal": "Pessoal",
             "unisantos": "UNISANTOS",
-            "backsite": "Backsite"
+            "backsite": "Backsite",
+            "freelance": "Freelance"
         },
         "noImage": "Prévia do Projeto",
         "buttons": {
@@ -39,6 +40,10 @@
         "smart_b3": {
             "title": "Predição de Dados da B3 (SmartB3)",
             "description": "Projeto acadêmico desenvolvido em grupo para predição de preços de ações da B3. O sistema utiliza modelos de Machine Learning (LSTM, GRU e XGBoost) para prever valores de curto e longo prazo e apresenta os dados em gráficos interativos. Inclui análise por setores e ranking de previsões."
+        },
+        "extrato_fgts_shopee": {
+            "title": "Automação de Extrato FGTS Digital - Shopee",
+            "description": "Desenvolvi uma automação completa para geração de extratos de FGTS no portal do governo, utilizando Selenium com interface Tkinter. O sistema lê planilhas de funcionários, acessa o site oficial do FGTS Digital, faz login com certificado e baixa os PDFs automaticamente. Inclui controle de licenças, estatísticas e integração com banco de dados. Projeto feito para uso interno da Shopee."
         },
         "analyze_energy_costs": {
             "title": "Analisador de Custos de Energia",

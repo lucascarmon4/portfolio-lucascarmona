@@ -30,11 +30,10 @@
         "isOffline": false
     },
     {
-        "id": "analyze_energy_costs",
-        "techs": ["React", "Flask", "Python", "Chart.js", "Pandas", "i18n"],
-        "link": "https://github.com/Portugol-Devoteers/pcg-analyze-energy-costs",
-        "source": "unisantos",
-        "image": "/images/projects/analyze_energy_costs.png",
+        "id": "extrato_fgts_shopee",
+        "techs": ["Python", "Selenium", "Tkinter", "Pandas", "SQL Server"],
+        "source": "freelance",
+        "image": "/images/projects/extrato_fgts_shopee.png",
         "isOffline": false
     },
     {
@@ -43,6 +42,14 @@
         "link": "https://www.vivacredpg.com.br",
         "source": "vivacred",
         "image": "/images/projects/public_vivacred.png",
+        "isOffline": false
+    },
+    {
+        "id": "analyze_energy_costs",
+        "techs": ["React", "Flask", "Python", "Chart.js", "Pandas", "i18n"],
+        "link": "https://github.com/Portugol-Devoteers/pcg-analyze-energy-costs",
+        "source": "unisantos",
+        "image": "/images/projects/analyze_energy_costs.png",
         "isOffline": false
     },
     {

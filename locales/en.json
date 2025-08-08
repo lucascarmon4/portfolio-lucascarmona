@@ -21,7 +21,8 @@
             "vivacred": "Viva Cred",
             "pessoal": "Personal",
             "unisantos": "UNISANTOS",
-            "backsite": "Backsite"
+            "backsite": "Backsite",
+            "freelance": "Freelance"
         },
         "noImage": "Project Preview",
         "buttons": {
@@ -39,6 +40,10 @@
         "smart_b3": {
             "title": "B3 Data Prediction (SmartB3)",
             "description": "An academic group project for predicting B3 stock prices. The system applies Machine Learning models (LSTM, GRU, and XGBoost) to forecast short- and long-term prices and displays the data through interactive charts. It also includes sector analysis and prediction ranking."
+        },
+        "extrato_fgts_shopee": {
+            "title": "FGTS Digital Statement Automation - Shopee",
+            "description": "I developed a complete automation tool for generating FGTS statements on the Brazilian government portal, using Selenium with a Tkinter interface. The system reads employee spreadsheets, accesses the official FGTS Digital website, logs in with a digital certificate, and automatically downloads the PDFs. It includes license control, processing statistics, and database integration. This project was built for Shopee's internal use."
         },
         "analyze_energy_costs": {
             "title": "Energy Cost Analyzer",
