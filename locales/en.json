@@ -65,6 +65,12 @@
     "experiences": {
         "mainTitle": "Experience and Qualifications",
         "title": "Experience",
+        "quatrodois": {
+            "title": "Full Stack Developer",
+            "company": "quatrodois",
+            "period": "Sep/2025 – Present",
+            "description": "- Development and maintenance of systems for large-scale clients using Django, Python, and MySQL.\n- Direct contribution to Multimarcas Consórcios, delivering new features, fixes, and continuous improvements.\n- Active participation in Scrum ceremonies (daily, planning, review, and retrospective) to ensure alignment and team cadence.\n- Technical support and ongoing optimization of production systems, focusing on stability, performance, and reliability."
+        },
         "viva_cred_2024": {
             "title": "Full-Stack Developer",
             "company": "Viva Cred",

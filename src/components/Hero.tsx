@@ -3,45 +3,55 @@ import Button from "./Button";
 import { Link } from "react-scroll";
 import i18n from "../utils/i18n";
 import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
 
 function Hero() {
     const { t } = useTranslation();
     const language = i18n.language as "en" | "pt";
+    
     return (
         <section
             id="header"
-            className="mt-[98px] min-h-[calc(100vh-98px)] flex items-center justify-center bg-black text-white px-6"
+            className="mt-[98px] min-h-[calc(100vh-98px)] flex items-center justify-center text-white px-6 relative z-10"
         >
-            {/* Conteúdo central */}
+            {/* Content */}
             <div className="text-center max-w-2xl">
-                <TypeAnimation
-                    key={language}
-                    sequence={[
-                        "LUCAS CARMONA NETO",
-                        2000,
-                        t("hero.title"),
-                        2000,
-                    ]}
-                    wrapper="h1"
-                    className="text-2xl sm:text-3xl md:text-4xl font-['Inter400'] font-bold leading-tight mb-6"
-                    cursor={true}
-                    repeat={Infinity}
-                    speed={20}
-                    deletionSpeed={30}
-                />
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                >
+                    <TypeAnimation
+                        key={language}
+                        sequence={[
+                            "LUCAS CARMONA NETO",
+                            2000,
+                            t("hero.title"),
+                            2000,
+                        ]}
+                        wrapper="h1"
+                        className="text-2xl sm:text-3xl md:text-4xl font-['Inter400'] font-bold leading-tight mb-6"
+                        cursor={true}
+                        repeat={Infinity}
+                        speed={20}
+                        deletionSpeed={30}
+                    />
+                </motion.div>
 
-                <p
+                <motion.p
                     className="text-sm sm:text-base text-gray-300 mb-8 font-[Inter400]"
-                    data-aos="fade-down"
-                    data-aos-delay={100}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
                 >
                     {t("hero.description")}
-                </p>
+                </motion.p>
 
-                <div
-                    data-aos="fade-down"
-                    data-aos-delay={200}
+                <motion.div
                     className="flex justify-center gap-4 flex-wrap"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
                 >
                     <Button type="primary">
                         <a href={`/cv/lucascarmona-${language}.pdf`} download>
@@ -51,7 +61,7 @@ function Hero() {
                     <Link to="projects" smooth duration={500} offset={-50}>
                         <Button type="secondary">{t("header.button1")}</Button>
                     </Link>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import Button from "../Button";
+import { motion } from "framer-motion";
 
 type Props = {
     title: string;
@@ -25,18 +26,23 @@ function ProjectCard({
     const { t } = useTranslation();
 
     return (
-        <div
-            data-aos="fade-down"
-            data-aos-delay={`${(idx + 1) * 100}`}
+        <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: idx * 0.1 }}
+            whileHover={{ y: -10, scale: 1.02 }}
             className="bg-black border border-white/10 rounded-lg overflow-hidden flex flex-col shadow-lg w-full max-w-sm sm:max-w-md lg:max-w-md h-full"
         >
             {/* imagem */}
-            <div className="h-40 sm:h-48 bg-gray-900 flex items-center justify-center text-white text-sm sm:text-base">
+            <div className="h-40 sm:h-48 bg-gray-900 flex items-center justify-center text-white text-sm sm:text-base overflow-hidden">
                 {image ? (
-                    <img
+                    <motion.img
                         src={image}
                         alt={title}
                         className="h-full w-full object-cover"
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ duration: 0.3 }}
                     />
                 ) : (
                     t("projects.noImage")
@@ -44,7 +50,7 @@ function ProjectCard({
             </div>
 
             {/* conteúdo */}
-            <div className="p-4 sm:p-5 flex flex-col flex-1 justify-between">
+            <div className="p-4 sm:p-5 flex flex-col flex-1 justify-between bg-black/80 backdrop-blur-sm">
                 <div>
                     <h3 className="text-base sm:text-lg lg:text-xl font-semibold mb-1">
                         {title}
@@ -94,7 +100,7 @@ function ProjectCard({
                         : t("projects.buttons.view")}
                 </Button>
             </div>
-        </div>
+        </motion.div>
     );
 }
 

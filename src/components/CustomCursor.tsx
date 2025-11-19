@@ -1,13 +1,17 @@
 import { useEffect, useState } from "react";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 
 function CustomCursor() {
-    const [realCursor, setRealCursor] = useState({ x: 0, y: 0 });
-    const [trailCursor, setTrailCursor] = useState({ x: 0, y: 0 });
-    const [isPointer, setIsPointer] = useState(false);
-    const [isText, setIsText] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
+    const [cursorVariant, setCursorVariant] = useState<"default" | "pointer" | "text">("default");
 
-    // Detecta se é dispositivo móvel
+    const cursorX = useMotionValue(-100);
+    const cursorY = useMotionValue(-100);
+
+    const springConfig = { damping: 25, stiffness: 700 };
+    const cursorXSpring = useSpring(cursorX, springConfig);
+    const cursorYSpring = useSpring(cursorY, springConfig);
+
     useEffect(() => {
         const checkMobile = () => {
             const isMobileDevice =
@@ -24,121 +28,104 @@ function CustomCursor() {
         return () => window.removeEventListener("resize", checkMobile);
     }, []);
 
-    // Atualiza posição do cursor real
     useEffect(() => {
-        if (isMobile) return; // Não adiciona listener em dispositivos móveis
+        if (isMobile) return;
 
-        const move = (e: MouseEvent) => {
-            const { clientX, clientY } = e;
-            setRealCursor({ x: clientX, y: clientY });
+        const moveCursor = (e: MouseEvent) => {
+            cursorX.set(e.clientX);
+            cursorY.set(e.clientY);
 
-            const el = document.elementFromPoint(clientX, clientY);
+            const target = e.target as HTMLElement;
+            
+            // Check if hovering over clickable elements
+            const isClickable = 
+                target.tagName === "BUTTON" ||
+                target.tagName === "A" ||
+                target.closest("button") ||
+                target.closest("a") ||
+                target.classList.contains("cursor-pointer");
 
-            if (
-                el &&
-                (el.tagName === "A" ||
-                    el.tagName === "BUTTON" ||
-                    el.classList.contains("cursor-pointer"))
-            ) {
-                setIsPointer(true);
-                setIsText(false);
-            } else if (el && isTextElement(el)) {
-                setIsPointer(false);
-                setIsText(true);
+            // Check if hovering over text
+            const isText = 
+                target.tagName === "P" ||
+                target.tagName === "SPAN" ||
+                target.tagName === "H1" ||
+                target.tagName === "H2" ||
+                target.tagName === "H3" ||
+                target.tagName === "INPUT" ||
+                target.tagName === "TEXTAREA";
+
+            if (isClickable) {
+                setCursorVariant("pointer");
+            } else if (isText) {
+                setCursorVariant("text");
             } else {
-                setIsPointer(false);
-                setIsText(false);
+                setCursorVariant("default");
             }
         };
 
-        window.addEventListener("mousemove", move);
-        return () => window.removeEventListener("mousemove", move);
-    }, [isMobile]);
+        window.addEventListener("mousemove", moveCursor);
+        return () => window.removeEventListener("mousemove", moveCursor);
+    }, [isMobile, cursorX, cursorY]);
 
-    // Rastro suavizado com animação frame a frame
-    useEffect(() => {
-        if (isMobile) return; // Não executa animação em dispositivos móveis
+    const variants = {
+        default: {
+            width: 16,
+            height: 16,
+            backgroundColor: "transparent",
+            border: "1px solid #2dd4bf",
+            mixBlendMode: "difference" as const,
+            borderRadius: "50%",
+        },
+        pointer: {
+            width: 48,
+            height: 48,
+            backgroundColor: "rgba(45, 212, 191, 0.2)",
+            border: "1px solid rgba(45, 212, 191, 0.5)",
+            mixBlendMode: "normal" as const,
+            borderRadius: "50%",
+        },
+        text: {
+            width: 32,
+            height: 32,
+            backgroundColor: "rgba(45, 212, 191, 0.1)",
+            border: "1px solid #2dd4bf",
+            mixBlendMode: "normal" as const,
+            borderRadius: "50%",
+        },
+    };
 
-        let animationFrameId: number;
-
-        const smoothFollow = () => {
-            setTrailCursor((prev) => {
-                const dx = realCursor.x - prev.x;
-                const dy = realCursor.y - prev.y;
-                const speed = 0.1;
-                return {
-                    x: prev.x + dx * speed,
-                    y: prev.y + dy * speed,
-                };
-            });
-
-            animationFrameId = requestAnimationFrame(smoothFollow);
-        };
-
-        animationFrameId = requestAnimationFrame(smoothFollow);
-        return () => cancelAnimationFrame(animationFrameId);
-    }, [realCursor, isMobile]);
-
-    // Detecta se é campo de texto
-    function isTextElement(el: Element): boolean {
-        const tag = el.tagName;
-        const editable = (el as HTMLElement).isContentEditable;
-        return (
-            tag === "P" ||
-            tag === "SPAN" ||
-            tag === "PRE" ||
-            tag === "CODE" ||
-            tag === "TEXTAREA" ||
-            tag === "INPUT" ||
-            editable
-        );
-    }
+    if (isMobile) return null;
 
     return (
         <>
-            {/* Só renderiza o cursor customizado em dispositivos desktop */}
-            {!isMobile && (
-                <>
-                    {/* Rastro com blur */}
-                    <div
-                        className="fixed top-0 left-0 pointer-events-none z-[9998]"
-                        style={{
-                            transform: `translate(${trailCursor.x - 40}px, ${
-                                trailCursor.y - 40
-                            }px)`,
-                        }}
-                    >
-                        <div className="w-20 h-20 rounded-full bg-primary opacity-30 blur-xl mix-blend-screen" />
-                    </div>
-
-                    {/* Cursor principal */}
-                    <div
-                        className="fixed top-0 left-0 pointer-events-none z-[9999] transition-transform duration-150 ease-out"
-                        style={{
-                            transform: isText
-                                ? `translate(${realCursor.x - 0.5}px, ${
-                                      realCursor.y - 12
-                                  }px)`
-                                : `translate(${realCursor.x - 8}px, ${
-                                      realCursor.y - 8
-                                  }px)`,
-                        }}
-                    >
-                        {isText ? (
-                            <div className="w-px h-6 bg-primary animate-pulse" />
-                        ) : (
-                            <div
-                                className={`transition-all duration-150 ease-out rounded-full mix-blend-difference 
-                                ${
-                                    isPointer
-                                        ? "w-4 h-4 border bg-primary border-white"
-                                        : "w-4 h-4 border border-primary bg-transparent"
-                                }`}
-                            />
-                        )}
-                    </div>
-                </>
-            )}
+            {/* Main Dot */}
+            <motion.div
+                className="fixed top-0 left-0 z-[9999] pointer-events-none rounded-full"
+                style={{
+                    x: cursorX,
+                    y: cursorY,
+                    translateX: "-50%",
+                    translateY: "-50%",
+                    width: 8,
+                    height: 8,
+                    backgroundColor: "#2dd4bf",
+                }}
+            />
+            
+            {/* Trailing Circle */}
+            <motion.div
+                className="fixed top-0 left-0 z-[9998] pointer-events-none rounded-full flex items-center justify-center"
+                style={{
+                    x: cursorXSpring,
+                    y: cursorYSpring,
+                    translateX: "-50%",
+                    translateY: "-50%",
+                }}
+                variants={variants}
+                animate={cursorVariant}
+                transition={{ type: "spring", stiffness: 500, damping: 28 }}
+            />
         </>
     );
 }

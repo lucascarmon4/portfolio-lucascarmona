@@ -1,6 +1,7 @@
 import EmblaCarousel from "../Carousel/EmblaCarousel";
 import projectsRaw from "../../data/projects.json";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 function ProjectsSection() {
     const { t } = useTranslation();
@@ -14,14 +15,17 @@ function ProjectsSection() {
     return (
         <section
             id="projects"
-            className="bg-black text-white sm:px-6 px-0 py-20 font-['Inter400']"
+            className="bg-black text-white sm:px-6 px-0 py-20 font-['Inter400'] relative z-10"
         >
-            <h2
+            <motion.h2
                 className="text-3xl sm:text-4xl font-bold mb-12 text-center"
-                data-aos="zoom-in-up"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
             >
                 {t("projects.title").toUpperCase()}
-            </h2>
+            </motion.h2>
 
             <EmblaCarousel
                 projects={projects}

@@ -3,6 +3,7 @@ import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { z } from "zod";
 import toast, { Toaster } from "react-hot-toast";
+import { motion } from "framer-motion";
 
 function ContactSection() {
     const { t } = useTranslation();
@@ -149,18 +150,24 @@ function ContactSection() {
     return (
         <section
             id="contact"
-            className="font-['Inter400'] min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-20 bg-black text-white"
+            className="font-['Inter400'] min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-20 bg-black text-white relative z-10"
         >
-            <h2
+            <motion.h2
                 className="hidden sm:block sm:text-5xl font-extrabold text-center mb-12"
-                data-aos="zoom-in-up"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
             >
                 {t("contact.mainTitle").toUpperCase()}
-            </h2>
+            </motion.h2>
 
-            <div
+            <motion.div
                 className="bg-[#111] border border-white/10 rounded-2xl p-6 sm:p-10 w-full max-w-md sm:max-w-xl lg:max-w-2xl shadow-lg"
-                data-aos="zoom-in-up"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
             >
                 <h3 className="text-xl sm:text-2xl font-bold text-center mb-2">
                     {t("contact.form.title").toUpperCase()}
@@ -241,10 +248,12 @@ function ContactSection() {
                     </div>
 
                     {/* Botão */}
-                    <div
+                    <motion.div
                         className="mt-3"
-                        data-aos="zoom-in-up"
-                        data-aos-delay={50}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
                     >
                         {isSubmitted ? (
                             <div className="w-full bg-green-600 text-white font-semibold py-3 text-base sm:text-lg rounded-md text-center">
@@ -265,39 +274,45 @@ function ContactSection() {
                                     : t("contact.form.submit").toUpperCase()}
                             </button>
                         )}
-                    </div>
+                    </motion.div>
                 </form>
 
                 {/* Ícones sociais */}
                 <div className="flex justify-center gap-6 sm:gap-8 mt-8 text-white/80 text-xl sm:text-2xl lg:text-3xl">
-                    <a
+                    <motion.a
                         href="https://www.linkedin.com/in/lucas-carmona-neto/"
                         target="_blank"
-                        data-aos="zoom-in-down"
-                        data-aos-delay={0}
                         aria-label="LinkedIn"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.5 }}
                     >
                         <FaLinkedin className="hover:text-primary transition-transform duration-300 transform hover:scale-110 cursor-pointer" />
-                    </a>
-                    <a
+                    </motion.a>
+                    <motion.a
                         href="https://github.com/lucascarmon4"
                         target="_blank"
-                        data-aos="zoom-in-down"
-                        data-aos-delay={50}
                         aria-label="GitHub"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
                     >
                         <FaGithub className="hover:text-primary transition-transform duration-300 transform hover:scale-110 cursor-pointer" />
-                    </a>
-                    <a
+                    </motion.a>
+                    <motion.a
                         href="mailto:lucascarmonaneto510@gmail.com"
-                        data-aos="zoom-in-down"
-                        data-aos-delay={100}
                         aria-label="Email"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.7 }}
                     >
                         <FaEnvelope className="hover:text-primary transition-transform duration-300 transform hover:scale-110 cursor-pointer" />
-                    </a>
+                    </motion.a>
                 </div>
-            </div>
+            </motion.div>
 
             {/* Toaster para as notificações */}
             <Toaster

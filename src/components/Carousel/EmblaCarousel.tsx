@@ -37,7 +37,7 @@ const EmblaCarousel: React.FC<PropType> = ({ projects, options }) => {
     return (
         <div className="w-full max-w-screen-xl mx-auto overflow-hidden px-0 sm:px-12 selection:bg-transparent">
             <div className="overflow-hidden" ref={emblaRef}>
-                <div className="flex gap-6">
+                <div className="flex gap-3 sm:gap-6">
                     {projects.map((proj, index) => (
                         <div
                             key={index}
@@ -51,7 +51,6 @@ const EmblaCarousel: React.FC<PropType> = ({ projects, options }) => {
 
             <div
                 className="mt-0 sm:mt-8 flex flex-col items-center sm:gap-4 gap-2"
-                data-aos="zoom-in-up"
             >
                 <div className="flex gap-4">
                     <PrevButton
